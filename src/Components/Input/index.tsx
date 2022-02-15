@@ -13,10 +13,18 @@ function Input({ handleChange, text }) {
         value={text.title || ''}
         onChange={handleChange}
       />
+      <label>Description:</label>
       <input
         type="text"
         name="description"
         value={text.description || ''}
+        onChange={handleChange}
+      />
+      <label>Image:</label>
+      <input
+        type="text"
+        name="image"
+        value={text.image || ''}
         onChange={handleChange}
       />
     </form>

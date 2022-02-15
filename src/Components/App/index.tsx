@@ -1,11 +1,21 @@
+import { stringify } from 'querystring';
 import { useState } from 'react';
-import './App.css';
 import Header from '../Header';
 import Input from '../Input';
 import Output from '../Output';
 
+interface iData {
+  title: string;
+  description: string;
+  image: string;
+}
+
 function App() {
-  const [data, setData] = useState({ title: 'test' });
+  const [data, setData] = useState<iData>({
+    title: '',
+    description: '',
+    image: '',
+  });
 
   function handleChange(e) {
     const name = e.target.name;
