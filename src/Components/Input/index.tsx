@@ -15,11 +15,25 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
         value={data.description || ''}
         onChange={handleChange}
       />
+      <label>Twitter Handle:</label>
+      <input
+        type="text"
+        name="twitter"
+        value={data.twitter || ''}
+        onChange={handleChange}
+      />
       <label>Image:</label>
       <input
         type="text"
         name="image"
         value={data.image || ''}
+        onChange={handleChange}
+      />
+      <label>Image Alt Text:</label>
+      <input
+        type="text"
+        name="alt"
+        value={data.alt || ''}
         onChange={handleChange}
       />
     </form>

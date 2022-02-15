@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <Header />
       <Input handleChange={handleChange} data={data} />
-      <Output />
+      <Output data={data} />
     </div>
   );
 }
