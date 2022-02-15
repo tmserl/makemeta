@@ -1,4 +1,4 @@
-function Output({ data }) {
+function Output() {
   return (
     <section>
       <p></p>

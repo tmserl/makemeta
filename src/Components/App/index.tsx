@@ -1,4 +1,3 @@
-import { stringify } from 'querystring';
 import { useState } from 'react';
 import Header from '../Header';
 import Input from '../Input';
@@ -17,7 +16,7 @@ function App() {
     image: '',
   });
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const name = e.target.name;
     const value = e.target.value;
     setData((values) => ({ ...values, [name]: value }));
@@ -26,8 +25,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Input handleChange={handleChange} text={data} />
-      <Output data={data} />
+      <Input handleChange={handleChange} data={data} />
+      <Output />
     </div>
   );
 }

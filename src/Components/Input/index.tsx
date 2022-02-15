@@ -1,30 +1,25 @@
-function Input({ handleChange, text }) {
+function Input({ handleChange, data }: { handleChange: any; data: any }) {
   return (
-    // <input
-    //   type="text"
-    //   value={text}
-    //   onChange={(e) => handleChange(e.target.value)}
-    // />
     <form>
       <label>Title:</label>
       <input
         type="text"
         name="title"
-        value={text.title || ''}
+        value={data.title || ''}
         onChange={handleChange}
       />
       <label>Description:</label>
       <input
         type="text"
         name="description"
-        value={text.description || ''}
+        value={data.description || ''}
         onChange={handleChange}
       />
       <label>Image:</label>
       <input
         type="text"
         name="image"
-        value={text.image || ''}
+        value={data.image || ''}
         onChange={handleChange}
       />
     </form>
