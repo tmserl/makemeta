@@ -15,6 +15,13 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
         value={data.description || ''}
         onChange={handleChange}
       />
+      <label>Website URL:</label>
+      <input
+        type="text"
+        name="url"
+        value={data.url || ''}
+        onChange={handleChange}
+      />
       <label>Twitter Handle:</label>
       <input
         type="text"
