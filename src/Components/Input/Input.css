@@ -18,10 +18,11 @@ form {
 }
 
 form p {
-  transform: translate(-3rem, -1rem);
+  transform: translate(-3rem, -2rem);
   padding: 1rem;
   color: white;
   font-size: 1.5rem;
+  font-weight: 700;
   background-color: #4b67fc;
   border-radius: 10px;
   position: absolute;

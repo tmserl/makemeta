@@ -26,7 +26,7 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
           value={data.url || ''}
           onChange={handleChange}
         />
-        <label>What's your Twitter Handle?</label>
+        <label>What's your Twitter handle?</label>
         <input
           type="text"
           name="twitter"

@@ -1,5 +1,6 @@
 .output {
   padding: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .wrapper-sm {
@@ -12,11 +13,17 @@
 .output {
   background-color: #8affb6;
   border: 5px #9c9c9c solid;
-
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.twitter-tags,
+.og-tags,
+.fb-tags {
+  font-weight: 400;
+  font-family: 'Dank Mono', 'Courier New', Courier, monospace;
 }
 
 .ta-da {
@@ -24,10 +31,15 @@
   padding: 1rem;
   color: white;
   font-size: 1.5rem;
+  font-weight: 700;
   background-color: #4b67fc;
   border-radius: 10px;
   position: absolute;
   top: 0;
   left: 0;
   translate: x;
+}
+
+.comment {
+  color: #9c9c9c;
 }

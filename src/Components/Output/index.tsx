@@ -10,7 +10,9 @@ function Output({ data }: { data: any }) {
           data.description ||
           data.twitter ||
           data.image ||
-          data.alt) && <p>&lt;!-- Twitter Meta Tags --&gt;</p>}
+          data.alt) && (
+          <p className="comment">&lt;!-- Twitter Meta Tags --&gt;</p>
+        )}
         {data.image && (
           <p>
             &lt;meta name="twitter:card" content="summary_large_image" /&gt;
@@ -65,7 +67,12 @@ function Output({ data }: { data: any }) {
           data.description ||
           data.twitter ||
           data.image ||
-          data.alt) && <p>&lt;!-- Open Graph Meta Tags --&gt;</p>}
+          data.alt) && (
+          <>
+            <br />
+            <p className="comment">&lt;!-- Open Graph Meta Tags --&gt;</p>
+          </>
+        )}
         {/* OG -Title */}
         {data.title && (
           <p>&lt;meta property="og:title" content="{data.title}" /&gt;</p>
@@ -93,7 +100,12 @@ function Output({ data }: { data: any }) {
 
       {/* Facebook Meta Tags */}
       <div className="fb-tags">
-        {data.title && <p>&lt;!-- Facebook Meta Tags --&gt;</p>}
+        {data.title && (
+          <>
+            <br />
+            <p className="comment">&lt;!-- Facebook Meta Tags --&gt;</p>
+          </>
+        )}
         {data.title && (
           <p>&lt;meta property="og:site_name" content="{data.title}" /&gt;</p>
         )}

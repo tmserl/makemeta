@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Header from '../Header';
 import Input from '../Input';
 import Output from '../Output';
+import Footer from '../Footer';
 
 interface iData {
   title: string;
@@ -28,6 +29,7 @@ function App() {
       <Header />
       <Input handleChange={handleChange} data={data} />
       <Output data={data} />
+      <Footer />
     </div>
   );
 }
