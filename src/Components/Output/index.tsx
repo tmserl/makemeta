@@ -1,8 +1,9 @@
-import { title } from 'process';
+import './Output.css';
 
 function Output({ data }: { data: any }) {
   return (
-    <section>
+    <section className="output wrapper-sm">
+      <p className="ta-da">Ta da!</p>
       {/* Twitter Tags */}
       <div className="twitter-tags">
         {(data.title ||

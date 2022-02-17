@@ -1,9 +1,11 @@
+import './Header.css';
+
 function Header() {
   return (
-    <div className="header">
+    <header className="wrapper">
       <h1>MakeMeta</h1>
       <h2>Generate Meta Tags for your website</h2>
-    </div>
+    </header>
   );
 }
 

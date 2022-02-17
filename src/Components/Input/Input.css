@@ -1,0 +1,50 @@
+.form {
+  padding: 2rem;
+}
+.wrapper-sm {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 720px;
+  padding: 4rem;
+}
+
+form {
+  background-color: #8fe0ff;
+  border: 5px #9c9c9c solid;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+form p {
+  transform: translate(-3rem, -1rem);
+  padding: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #4b67fc;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  translate: x;
+}
+
+label {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semi-bold);
+  padding-bottom: 0.5rem;
+}
+
+input {
+  margin-bottom: 2rem;
+  font-family: var(--font-stack);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--almost-black);
+  border-radius: 13px;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border: none;
+  outline: none;
+  resize: none;
+}

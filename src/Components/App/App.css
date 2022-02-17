@@ -1,0 +1,25 @@
+:root {
+  --font-stack: 'Source Sans Pro', Arial, Helvetica Neue, Helvetica, sans-serif;
+  --font-size-regular: 1.3rem;
+  --font-weight-semi-bold: 600;
+  --light-gray: #f3f3f3;
+  --medium-gray: #d8d8d8;
+  --almost-white: #fafafa;
+  --almost-black: #343434;
+  --button-color: #e1e2e4;
+  --accent-color: #5483e9;
+  --accent-color-lighter: #bfd1f8;
+}
+
+.App {
+  font-family: var(--font-stack);
+  color: var(--almost-black);
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1000px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
