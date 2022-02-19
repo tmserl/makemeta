@@ -7,6 +7,7 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
         <p>Start here</p>
         <label>What's the name of your site?</label>
         <input
+          placeholder="MakeMeta"
           type="text"
           name="title"
           value={data.title || ''}
@@ -14,6 +15,7 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
         />
         <label>How would you describe your site?</label>
         <input
+          placeholder="Effortlessly generate Meta Tags for your website"
           type="text"
           name="description"
           value={data.description || ''}
@@ -21,6 +23,7 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
         />
         <label>What's the URL for your site?</label>
         <input
+          placeholder="https://makemeta.app"
           type="text"
           name="url"
           value={data.url || ''}
@@ -28,6 +31,7 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
         />
         <label>What's your Twitter handle?</label>
         <input
+          placeholder="@tmserl_"
           type="text"
           name="twitter"
           value={data.twitter || ''}
@@ -35,6 +39,7 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
         />
         <label>Link (URL) to an image?</label>
         <input
+          placeholder="https://i.kym-cdn.com/photos/images/facebook/000/764/965/47a.jpg"
           type="text"
           name="image"
           value={data.image || ''}
@@ -42,6 +47,7 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
         />
         <label>What's the Alt text for your image?</label>
         <input
+          placeholder="Michael Rosen saying 'Nice'"
           type="text"
           name="alt"
           value={data.alt || ''}

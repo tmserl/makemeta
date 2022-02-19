@@ -21,7 +21,8 @@
 
 .twitter-tags,
 .og-tags,
-.fb-tags {
+.fb-tags,
+.makemeta {
   font-weight: 400;
   font-family: 'Dank Mono', 'Courier New', Courier, monospace;
 }

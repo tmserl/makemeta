@@ -3,12 +3,9 @@
   --font-size-regular: 1.3rem;
   --font-weight-semi-bold: 600;
   --light-gray: #f3f3f3;
-  --medium-gray: #d8d8d8;
+  --medium-gray: #d3d3d3;
   --almost-white: #fafafa;
   --almost-black: #343434;
-  --button-color: #e1e2e4;
-  --accent-color: #5483e9;
-  --accent-color-lighter: #bfd1f8;
 }
 
 .App {

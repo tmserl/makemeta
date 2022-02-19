@@ -44,8 +44,16 @@ input {
   font-weight: var(--font-weight-semi-bold);
   color: var(--almost-black);
   border-radius: 13px;
-  padding: 0.5rem 2rem 0.5rem 2rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   border: none;
-  outline: none;
   resize: none;
+}
+input::placeholder {
+  color: var(--medium-gray);
+}
+
+input:focus {
+  border-radius: 13px;
+  box-shadow: 0 0 0 3px #9c9c9c;
+  outline: none;
 }

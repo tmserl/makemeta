@@ -110,6 +110,21 @@ function Output({ data }: { data: any }) {
           <p>&lt;meta property="og:site_name" content="{data.title}" /&gt;</p>
         )}
       </div>
+      {/* MakeMeta */}
+      <div className="makemeta">
+        {(data.title ||
+          data.description ||
+          data.twitter ||
+          data.image ||
+          data.alt) && (
+          <>
+            <br />
+            <p className="comment">
+              &lt;!-- Meta Tags generated using https://makemeta.app --&gt;
+            </p>
+          </>
+        )}
+      </div>
     </section>
   );
 }
