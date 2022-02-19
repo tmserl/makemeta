@@ -4,10 +4,23 @@ function Output({ data }: { data: any }) {
   return (
     <section className="output wrapper-sm">
       <p className="ta-da">Ta da!</p>
-      <div className="title">
-        {data.title && <p>&lt;title&gt;{data.title}&lt;/title&gt;</p>}
-        <br />
-      </div>
+      {!data.title &&
+        !data.description &&
+        !data.twitter &&
+        !data.image &&
+        !data.alt && (
+          <div className="loading">
+            <p className="comment">Preparing Meta Tag Generation...</p>
+          </div>
+        )}
+
+      {data.title && (
+        <div className="title">
+          <p>&lt;title&gt;{data.title}&lt;/title&gt;</p>{' '}
+        </div>
+      )}
+      <br />
+
       {/* Twitter Tags */}
       <div className="twitter-tags">
         {(data.title ||
@@ -115,18 +128,6 @@ function Output({ data }: { data: any }) {
         )}
       </div>
       {/* MakeMeta */}
-      <div className="loading">
-        {(!data.title ||
-          !data.description ||
-          !data.twitter ||
-          !data.image ||
-          !data.alt) && (
-          <>
-            <br />
-            <p className="comment">Preparing Meta Tag Generation...</p>
-          </>
-        )}
-      </div>
       <div className="makemeta">
         {(data.title ||
           data.description ||

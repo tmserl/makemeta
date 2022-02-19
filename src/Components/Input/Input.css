@@ -1,13 +1,3 @@
-.form {
-  padding: 2rem;
-}
-.wrapper-sm {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 720px;
-  padding: 4rem;
-}
-
 form {
   background-color: #8fe0ff;
   border: 5px #9c9c9c solid;
@@ -18,7 +8,7 @@ form {
 }
 
 form p {
-  transform: translate(-3rem, -2rem);
+  transform: translate(-3rem, -1rem);
   padding: 1rem;
   color: white;
   font-size: 1.5rem;
@@ -28,7 +18,6 @@ form p {
   position: absolute;
   top: 0;
   left: 0;
-  translate: x;
 }
 
 label {
@@ -56,4 +45,10 @@ input:focus {
   border-radius: 13px;
   box-shadow: 0 0 0 3px #9c9c9c;
   outline: none;
+}
+
+@media screen and (max-width: 800px) {
+  form p {
+    transform: translate(2.5rem, -2rem);
+  }
 }

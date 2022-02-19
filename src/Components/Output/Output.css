@@ -1,21 +1,7 @@
 .output {
-  padding: 2rem;
-  margin-bottom: 2.5rem;
-}
-
-.wrapper-sm {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 720px;
-  padding: 4rem;
-}
-
-.output {
   background-color: #8affb6;
   border: 5px #9c9c9c solid;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
   position: relative;
 }
 
@@ -40,9 +26,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  translate: x;
 }
 
 .comment {
   color: #9c9c9c;
+}
+
+@media screen and (max-width: 800px) {
+  .ta-da {
+    transform: translate(2.5rem, -2rem);
+  }
 }

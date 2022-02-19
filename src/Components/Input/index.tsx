@@ -2,7 +2,7 @@ import './Input.css';
 
 function Input({ handleChange, data }: { handleChange: any; data: any }) {
   return (
-    <section className="form">
+    <section>
       <form className="wrapper-sm">
         <p>Start here</p>
         <label>What's the name of your site?</label>
