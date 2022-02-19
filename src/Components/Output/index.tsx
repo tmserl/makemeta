@@ -4,6 +4,10 @@ function Output({ data }: { data: any }) {
   return (
     <section className="output wrapper-sm">
       <p className="ta-da">Ta da!</p>
+      <div className="title">
+        {data.title && <p>&lt;title&gt;{data.title}&lt;/title&gt;</p>}
+        <br />
+      </div>
       {/* Twitter Tags */}
       <div className="twitter-tags">
         {(data.title ||

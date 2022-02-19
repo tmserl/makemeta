@@ -45,7 +45,7 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
           value={data.image || ''}
           onChange={handleChange}
         />
-        <label>What's the Alt text for your image?</label>
+        <label>What's the alt text for your image?</label>
         <input
           placeholder="Michael Rosen saying 'Nice'"
           type="text"
