@@ -111,6 +111,18 @@ function Output({ data }: { data: any }) {
         )}
       </div>
       {/* MakeMeta */}
+      <div className="loading">
+        {(!data.title ||
+          !data.description ||
+          !data.twitter ||
+          !data.image ||
+          !data.alt) && (
+          <>
+            <br />
+            <p className="comment">Preparing Meta Tag Generation...</p>
+          </>
+        )}
+      </div>
       <div className="makemeta">
         {(data.title ||
           data.description ||
