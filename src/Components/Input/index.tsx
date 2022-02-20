@@ -39,7 +39,7 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
         />
         <label>Link (URL) to an image?</label>
         <input
-          placeholder="https://i.kym-cdn.com/photos/images/facebook/000/764/965/47a.jpg"
+          placeholder="https://social-card-image.xyz/"
           type="text"
           name="image"
           value={data.image || ''}
@@ -47,7 +47,7 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
         />
         <label>What's the alt text for your image?</label>
         <input
-          placeholder="Michael Rosen saying 'Nice'"
+          placeholder="MakeMeta"
           type="text"
           name="alt"
           value={data.alt || ''}
