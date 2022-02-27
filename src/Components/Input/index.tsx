@@ -1,6 +1,16 @@
 import './Input.css';
 
-function Input({ handleChange, data }: { handleChange: any; data: any }) {
+function Input({
+  handleChange,
+  handleCounter,
+  data,
+  counter,
+}: {
+  handleChange: any;
+  handleCounter: any;
+  data: any;
+  counter: any;
+}) {
   return (
     <section>
       <form className="wrapper-sm">
@@ -11,7 +21,10 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
           type="text"
           name="title"
           value={data.title || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+            handleCounter(e);
+          }}
         />
         <label>How would you describe your site?</label>
         <input
