@@ -23,7 +23,7 @@ function Input({
           value={data.title || ''}
           onChange={(e) => {
             handleChange(e);
-            handleCounter(e);
+            handleCounter(e, 0);
           }}
         />
         <label>How would you describe your site?</label>
@@ -32,7 +32,10 @@ function Input({
           type="text"
           name="description"
           value={data.description || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+            handleCounter(e, 1);
+          }}
         />
         <label>What's the URL for your site?</label>
         <input
@@ -40,7 +43,10 @@ function Input({
           type="text"
           name="url"
           value={data.url || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+            handleCounter(e, 2);
+          }}
         />
         <label>What's your Twitter handle?</label>
         <input
@@ -48,7 +54,10 @@ function Input({
           type="text"
           name="twitter"
           value={data.twitter || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+            handleCounter(e, 3);
+          }}
         />
         <label>Link (URL) to an image?</label>
         <input
@@ -56,7 +65,10 @@ function Input({
           type="text"
           name="image"
           value={data.image || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+            handleCounter(e, 4);
+          }}
         />
         <label>What's the alt text for your image?</label>
         <input
@@ -64,7 +76,10 @@ function Input({
           type="text"
           name="alt"
           value={data.alt || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+            handleCounter(e, 5);
+          }}
         />
       </form>
     </section>

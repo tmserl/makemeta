@@ -24,7 +24,7 @@ function App() {
     image: '',
   });
 
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState([0, 0, 0, 0, 0, 0]);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const name = e.target.name;
@@ -32,9 +32,12 @@ function App() {
     setData((values) => ({ ...values, [name]: value }));
   }
 
-  function handleCounter(e: React.ChangeEvent<HTMLInputElement>) {
-    setCounter(e.target.value.length);
-    console.log(counter);
+  function handleCounter(e: React.ChangeEvent<HTMLInputElement>, index: any) {
+    setCounter([
+      ...counter.slice(0, index),
+      e.target.value.length,
+      ...counter.slice(index + 1),
+    ]);
   }
 
   return (
