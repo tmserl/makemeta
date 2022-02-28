@@ -7,7 +7,7 @@ form {
   position: relative;
 }
 
-form p {
+.start-here {
   transform: translate(-3rem, -1rem);
   padding: 1rem;
   color: white;

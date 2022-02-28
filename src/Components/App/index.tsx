@@ -24,7 +24,7 @@ function App() {
     image: '',
   });
 
-  const [counter, setCounter] = useState([0, 0, 0, 0, 0, 0]);
+  const [counter, setCounter] = useState([0, 0, 0]);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const name = e.target.name;

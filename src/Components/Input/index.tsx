@@ -14,7 +14,7 @@ function Input({
   return (
     <section>
       <form className="wrapper-sm">
-        <p>Start here</p>
+        <p className="start-here">Start here</p>
         <label>What's the name of your site?</label>
         <input
           placeholder="MakeMeta"
@@ -26,6 +26,12 @@ function Input({
             handleCounter(e, 0);
           }}
         />
+        <p className="counter">
+          <span className={`${counter[0] > 60 ? 'counter__limit' : ''}`}>
+            {counter[0]}
+          </span>
+          / 60
+        </p>
         <label>How would you describe your site?</label>
         <input
           placeholder="Effortlessly generate Meta Tags for your website"
@@ -37,6 +43,12 @@ function Input({
             handleCounter(e, 1);
           }}
         />
+        <p className="counter">
+          <span className={`${counter[1] > 110 ? 'counter__limit' : ''}`}>
+            {counter[1]}
+          </span>
+          / 110
+        </p>
         <label>What's the URL for your site?</label>
         <input
           placeholder="https://makemeta.app"
@@ -45,7 +57,6 @@ function Input({
           value={data.url || ''}
           onChange={(e) => {
             handleChange(e);
-            handleCounter(e, 2);
           }}
         />
         <label>What's your Twitter handle?</label>
@@ -56,7 +67,6 @@ function Input({
           value={data.twitter || ''}
           onChange={(e) => {
             handleChange(e);
-            handleCounter(e, 3);
           }}
         />
         <label>Link (URL) to an image?</label>
@@ -67,7 +77,6 @@ function Input({
           value={data.image || ''}
           onChange={(e) => {
             handleChange(e);
-            handleCounter(e, 4);
           }}
         />
         <label>What's the alt text for your image?</label>
@@ -78,9 +87,15 @@ function Input({
           value={data.alt || ''}
           onChange={(e) => {
             handleChange(e);
-            handleCounter(e, 5);
+            handleCounter(e, 2);
           }}
         />
+        <p className="counter">
+          <span className={`${counter[2] > 110 ? 'counter__limit' : ''}`}>
+            {counter[2]}
+          </span>
+          / 110
+        </p>
       </form>
     </section>
   );
