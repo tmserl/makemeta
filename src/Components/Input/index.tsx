@@ -15,7 +15,13 @@ function Input({
     <section>
       <form className="wrapper-sm">
         <p className="start-here">Start here</p>
-        <label>What's the name of your site?</label>
+        <label>
+          What's the name of your site?{' '}
+          <span className={`${counter[0] > 60 ? 'counter__limit' : ''}`}>
+            {counter[0]}
+          </span>
+          &nbsp;/ 60
+        </label>
         <input
           placeholder="MakeMeta"
           type="text"
@@ -26,13 +32,13 @@ function Input({
             handleCounter(e, 0);
           }}
         />
-        <p className="counter">
-          <span className={`${counter[0] > 60 ? 'counter__limit' : ''}`}>
-            {counter[0]}
+        <label>
+          How would you describe your site?{' '}
+          <span className={`${counter[1] > 110 ? 'counter__limit' : ''}`}>
+            {counter[1]}
           </span>
-          / 60
-        </p>
-        <label>How would you describe your site?</label>
+          / 110
+        </label>
         <input
           placeholder="Effortlessly generate Meta Tags for your website"
           type="text"
@@ -43,12 +49,6 @@ function Input({
             handleCounter(e, 1);
           }}
         />
-        <p className="counter">
-          <span className={`${counter[1] > 110 ? 'counter__limit' : ''}`}>
-            {counter[1]}
-          </span>
-          / 110
-        </p>
         <label>What's the URL for your site?</label>
         <input
           placeholder="https://makemeta.app"
@@ -79,7 +79,13 @@ function Input({
             handleChange(e);
           }}
         />
-        <label>What's the alt text for your image?</label>
+        <label>
+          What's the alt text for your image?{' '}
+          <span className={`${counter[2] > 110 ? 'counter__limit' : ''}`}>
+            {counter[2]}
+          </span>
+          / 110
+        </label>
         <input
           placeholder="MakeMeta"
           type="text"
@@ -90,12 +96,6 @@ function Input({
             handleCounter(e, 2);
           }}
         />
-        <p className="counter">
-          <span className={`${counter[2] > 110 ? 'counter__limit' : ''}`}>
-            {counter[2]}
-          </span>
-          / 110
-        </p>
       </form>
     </section>
   );

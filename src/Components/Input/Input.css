@@ -27,6 +27,7 @@ label {
 }
 
 input {
+  position: relative;
   margin-bottom: 2rem;
   font-family: var(--font-stack);
   font-size: 1.25rem;
@@ -45,6 +46,10 @@ input:focus {
   border-radius: 13px;
   box-shadow: 0 0 0 3px #9c9c9c;
   outline: none;
+}
+
+.counter__limit {
+  color: #ff8a8a;
 }
 
 @media screen and (max-width: 800px) {
