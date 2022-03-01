@@ -17,14 +17,14 @@ function Input({
         <p className="start-here">Start here</p>
         <label>
           What's the name of your site?{' '}
-          <span
+          <div
             className={`${
               counter[0] > 60 ? 'counter counter__limit' : 'counter'
             }`}
           >
             {counter[0]}
             &nbsp;/ 60
-          </span>
+          </div>
         </label>
         <input
           placeholder="MakeMeta"
@@ -38,13 +38,13 @@ function Input({
         />
         <label>
           How would you describe your site?{' '}
-          <span
+          <div
             className={`${
               counter[1] > 110 ? 'counter counter__limit' : 'counter'
             }`}
           >
             {counter[1]}&nbsp;/ 110
-          </span>
+          </div>
         </label>
         <input
           placeholder="Effortlessly generate Meta Tags for your website"
@@ -88,13 +88,13 @@ function Input({
         />
         <label>
           What's the alt text for your image?{' '}
-          <span
+          <div
             className={`${
               counter[2] > 110 ? 'counter counter__limit' : 'counter'
             }`}
           >
             {counter[2]}&nbsp;/ 110
-          </span>
+          </div>
         </label>
         <input
           placeholder="MakeMeta"
