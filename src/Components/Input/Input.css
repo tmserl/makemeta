@@ -7,7 +7,7 @@ form {
   position: relative;
 }
 
-form p {
+.start-here {
   transform: translate(-3rem, -1rem);
   padding: 1rem;
   color: white;
@@ -27,6 +27,7 @@ label {
 }
 
 input {
+  position: relative;
   margin-bottom: 2rem;
   font-family: var(--font-stack);
   font-size: 1.25rem;
@@ -47,8 +48,51 @@ input:focus {
   outline: none;
 }
 
+.counter {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-left: 0.35rem;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.counter__limit {
+  font-weight: 600;
+  color: white;
+  background-color: #c26c6c;
+  /* Shake Animation */
+  animation: shake 0.75s;
+  animation-iteration-count: infinite;
+}
+
+/* Shake Keyframes */
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-0.25px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(0.5px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-0.5px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(1px, 0, 0);
+  }
+}
+
 @media screen and (max-width: 800px) {
-  form p {
+  .start-here {
     transform: translate(2.5rem, -2rem);
   }
 }

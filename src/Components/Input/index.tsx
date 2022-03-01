@@ -1,25 +1,60 @@
 import './Input.css';
 
-function Input({ handleChange, data }: { handleChange: any; data: any }) {
+function Input({
+  handleChange,
+  handleCounter,
+  data,
+  counter,
+}: {
+  handleChange: any;
+  handleCounter: any;
+  data: any;
+  counter: any;
+}) {
   return (
     <section>
       <form className="wrapper-sm">
-        <p>Start here</p>
-        <label>What's the name of your site?</label>
+        <p className="start-here">Start here</p>
+        <label>
+          What's the name of your site?{' '}
+          <div
+            className={`${
+              counter[0] > 60 ? 'counter counter__limit' : 'counter'
+            }`}
+          >
+            {counter[0]}
+            &nbsp;/ 60
+          </div>
+        </label>
         <input
           placeholder="MakeMeta"
           type="text"
           name="title"
           value={data.title || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+            handleCounter(e, 0);
+          }}
         />
-        <label>How would you describe your site?</label>
+        <label>
+          How would you describe your site?{' '}
+          <div
+            className={`${
+              counter[1] > 105 ? 'counter counter__limit' : 'counter'
+            }`}
+          >
+            {counter[1]}&nbsp;/ 105
+          </div>
+        </label>
         <input
           placeholder="Effortlessly generate Meta Tags for your website"
           type="text"
           name="description"
           value={data.description || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+            handleCounter(e, 1);
+          }}
         />
         <label>What's the URL for your site?</label>
         <input
@@ -27,7 +62,9 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
           type="text"
           name="url"
           value={data.url || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+          }}
         />
         <label>What's your Twitter handle?</label>
         <input
@@ -35,7 +72,9 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
           type="text"
           name="twitter"
           value={data.twitter || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+          }}
         />
         <label>Link (URL) to an image?</label>
         <input
@@ -43,15 +82,29 @@ function Input({ handleChange, data }: { handleChange: any; data: any }) {
           type="text"
           name="image"
           value={data.image || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+          }}
         />
-        <label>What's the alt text for your image?</label>
+        <label>
+          What's the alt text for your image?{' '}
+          <div
+            className={`${
+              counter[2] > 105 ? 'counter counter__limit' : 'counter'
+            }`}
+          >
+            {counter[2]}&nbsp;/ 105
+          </div>
+        </label>
         <input
           placeholder="MakeMeta"
           type="text"
           name="alt"
           value={data.alt || ''}
-          onChange={handleChange}
+          onChange={(e) => {
+            handleChange(e);
+            handleCounter(e, 2);
+          }}
         />
       </form>
     </section>
