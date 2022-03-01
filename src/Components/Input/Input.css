@@ -44,7 +44,7 @@ input::placeholder {
 
 input:focus {
   border-radius: 13px;
-  box-shadow: 0 0 0 3px #ce5353;
+  box-shadow: 0 0 0 3px #9c9c9c;
   outline: none;
 }
 
@@ -61,7 +61,7 @@ input:focus {
 .counter__limit {
   font-weight: 600;
   color: white;
-  background-color: #ff8a8a;
+  background-color: #c26c6c;
   /* Shake Animation */
   animation: shake 0.75s;
   animation-iteration-count: infinite;
