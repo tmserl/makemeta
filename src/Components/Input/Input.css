@@ -44,7 +44,7 @@ input::placeholder {
 
 input:focus {
   border-radius: 13px;
-  box-shadow: 0 0 0 3px #9c9c9c;
+  box-shadow: 0 0 0 3px #ce5353;
   outline: none;
 }
 
@@ -52,9 +52,10 @@ input:focus {
   display: inline-block;
   font-size: 0.85rem;
   font-weight: 400;
-  margin-left: 0.5rem;
-  padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+  margin-left: 0.35rem;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
   border-radius: 5px;
+  vertical-align: middle;
 }
 
 .counter__limit {
@@ -62,7 +63,7 @@ input:focus {
   color: white;
   background-color: #ff8a8a;
   /* Shake Animation */
-  animation: shake 0.5s;
+  animation: shake 0.75s;
   animation-iteration-count: infinite;
 }
 
@@ -70,23 +71,23 @@ input:focus {
 @keyframes shake {
   10%,
   90% {
-    transform: translate3d(-0.5px, 0, 0);
+    transform: translate3d(-0.25px, 0, 0);
   }
 
   20%,
   80% {
-    transform: translate3d(1px, 0, 0);
+    transform: translate3d(0.5px, 0, 0);
   }
 
   30%,
   50%,
   70% {
-    transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-0.5px, 0, 0);
   }
 
   40%,
   60% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(1px, 0, 0);
   }
 }
 

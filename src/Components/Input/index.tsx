@@ -40,10 +40,10 @@ function Input({
           How would you describe your site?{' '}
           <div
             className={`${
-              counter[1] > 110 ? 'counter counter__limit' : 'counter'
+              counter[1] > 105 ? 'counter counter__limit' : 'counter'
             }`}
           >
-            {counter[1]}&nbsp;/ 110
+            {counter[1]}&nbsp;/ 105
           </div>
         </label>
         <input
@@ -90,10 +90,10 @@ function Input({
           What's the alt text for your image?{' '}
           <div
             className={`${
-              counter[2] > 110 ? 'counter counter__limit' : 'counter'
+              counter[2] > 105 ? 'counter counter__limit' : 'counter'
             }`}
           >
-            {counter[2]}&nbsp;/ 110
+            {counter[2]}&nbsp;/ 105
           </div>
         </label>
         <input
