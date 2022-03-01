@@ -48,8 +48,18 @@ input:focus {
   outline: none;
 }
 
+.counter {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
 .counter__limit {
-  color: #ff8a8a;
+  font-weight: 600;
+  color: white;
+  background-color: #ff8a8a;
 }
 
 @media screen and (max-width: 800px) {
