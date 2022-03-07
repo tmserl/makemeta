@@ -1,7 +1,7 @@
 form {
   background-color: #8fe0ff;
   border: 5px #9c9c9c solid;
-  border-radius: 20px;
+  border-radius: 13px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -14,10 +14,31 @@ form {
   font-size: 1.5rem;
   font-weight: 700;
   background-color: #4b67fc;
-  border-radius: 10px;
+  border-radius: 13px;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.hint-toggle {
+  font-weight: 700;
+  cursor: pointer;
+  position: absolute;
+  color: #d6d6d6;
+  background-color: #f3f3f3;
+  top: 1rem;
+  right: 1rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  border-radius: 50%;
+  text-align: center;
+  /* Prevent Text Selection */
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 label {

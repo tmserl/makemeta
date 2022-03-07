@@ -1,4 +1,7 @@
 import './Input.css';
+import { useState } from 'react';
+import Hint from '../Hint';
+import hints from '../../lib/hints';
 
 function Input({
   handleChange,
@@ -11,10 +14,24 @@ function Input({
   data: any;
   counter: any;
 }) {
+  const [toggle, setToggle] = useState<boolean>(false);
+
+  function hintToggler() {
+    setToggle(!toggle);
+  }
+
   return (
     <section>
       <form className="wrapper-sm">
         <p className="start-here">Start here</p>
+        <div
+          onClick={() => {
+            hintToggler();
+          }}
+          className="hint-toggle"
+        >
+          ?
+        </div>
         <label>
           What's the name of your site?{' '}
           <div
@@ -36,6 +53,7 @@ function Input({
             handleCounter(e, 0);
           }}
         />
+        {toggle && <Hint hint={hints.title} toggle={toggle} />}
         <label>
           How would you describe your site?{' '}
           <div
@@ -56,6 +74,7 @@ function Input({
             handleCounter(e, 1);
           }}
         />
+        {toggle && <Hint hint={hints.description} toggle={toggle} />}
         <label>What's the URL for your site?</label>
         <input
           placeholder="https://makemeta.app"
@@ -66,6 +85,7 @@ function Input({
             handleChange(e);
           }}
         />
+        {toggle && <Hint hint={hints.url} toggle={toggle} />}
         <label>What's your Twitter handle?</label>
         <input
           placeholder="@tmserl_"
@@ -76,6 +96,7 @@ function Input({
             handleChange(e);
           }}
         />
+        {toggle && <Hint hint={hints.twitter} toggle={toggle} />}
         <label>Link (URL) to an image?</label>
         <input
           placeholder="https://social-card-image.xyz/"
@@ -86,6 +107,7 @@ function Input({
             handleChange(e);
           }}
         />
+        {toggle && <Hint hint={hints.img} toggle={toggle} />}
         <label>
           What's the alt text for your image?{' '}
           <div
@@ -106,6 +128,7 @@ function Input({
             handleCounter(e, 2);
           }}
         />
+        {toggle && <Hint hint={hints.alt} toggle={toggle} />}
       </form>
     </section>
   );
