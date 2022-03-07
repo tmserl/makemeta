@@ -52,6 +52,12 @@ function Input({
             handleCounter(e, 0);
           }}
         />
+        {toggle && (
+          <Hint
+            hint="Information on what this field is about will go here."
+            toggle={toggle}
+          />
+        )}
         <label>
           How would you describe your site?{' '}
           <div
