@@ -8,12 +8,13 @@ interface iHints {
 }
 
 const hints: iHints = {
-  title: 'Information on title goes here',
-  description: 'Information on description goes here',
-  url: 'Information on url goes here',
-  twitter: 'Information on twitter goes here',
-  img: 'Information on image goes here',
-  alt: 'Information on alt goes here',
+  title:
+    'The title of your website as it should appear on Google or Social Media posts.',
+  description: 'A short, helpful description of your website.',
+  url: 'The main URL for your website.',
+  twitter: 'Your Twitter @handle.',
+  img: 'A URL to a unique image for your website. Ideally in a 2:1 aspect ratio.',
+  alt: "Describe what's happening in your image, or if its a logo, simply repeat the text in the image.",
 };
 
 export default hints;

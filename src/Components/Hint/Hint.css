@@ -6,6 +6,7 @@
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 13px;
   border: 2px #9c9c9c solid;
+  /* Transition */
   animation: transition 0.75s cubic-bezier(0.42, 0, 0.55, 1.5) forwards;
 }
 
@@ -22,7 +23,7 @@
   }
   100% {
     color: var(--almost-black);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     background-color: #ffffff;
     transform: translateY(-1.25rem);
   }

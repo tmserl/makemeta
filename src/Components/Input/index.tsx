@@ -24,14 +24,14 @@ function Input({
     <section>
       <form className="wrapper-sm">
         <p className="start-here">Start here</p>
-        <p
+        <div
           onClick={() => {
             hintToggler();
           }}
           className="hint-toggle"
         >
           ?
-        </p>
+        </div>
         <label>
           What's the name of your site?{' '}
           <div
