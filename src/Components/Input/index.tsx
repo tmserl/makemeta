@@ -1,4 +1,6 @@
 import './Input.css';
+import { useState } from 'react';
+import Hint from '../Hint';
 
 function Input({
   handleChange,
@@ -11,10 +13,24 @@ function Input({
   data: any;
   counter: any;
 }) {
+  const [toggle, setToggle] = useState<boolean>(false);
+
+  function hintToggler() {
+    setToggle(!toggle);
+  }
+
   return (
     <section>
       <form className="wrapper-sm">
         <p className="start-here">Start here</p>
+        <p
+          onClick={() => {
+            hintToggler();
+          }}
+          className="hint-toggle"
+        >
+          ?
+        </p>
         <label>
           What's the name of your site?{' '}
           <div
