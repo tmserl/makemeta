@@ -16,7 +16,7 @@ function Output({ data }: { data: any }) {
 
       {data.title && (
         <div className="title">
-          <p>&lt;title&gt;{data.title}&lt;/title&gt;</p>{' '}
+          <p>{`<title>${data.title}</title>`}</p>
         </div>
       )}
       <br />
@@ -28,16 +28,14 @@ function Output({ data }: { data: any }) {
           data.twitter ||
           data.image ||
           data.alt) && (
-          <p className="comment">&lt;!-- Twitter Meta Tags --&gt;</p>
+          <p className="comment">{`<!-- Twitter Meta Tags -->`}</p>
         )}
         {data.image && (
-          <p>
-            &lt;meta name="twitter:card" content="summary_large_image" /&gt;
-          </p>
+          <p>{`<meta name="twitter:card" content="summary_large_image" />`}</p>
         )}
         {/* Twitter - Title */}
         {data.title && (
-          <p>&lt;meta name="twitter:title" content="{data.title}" /&gt;</p>
+          <p>{`<meta name="twitter:title" content="${data.title}" />`}</p>
         )}
         {/* Twitter - Site  */}
         {data.twitter && (
@@ -64,17 +62,16 @@ function Output({ data }: { data: any }) {
         {/* Twitter - Description */}
         {data.description && (
           <p>
-            &lt;meta name="twitter:description" content="{data.description}"
-            /&gt;
+            {`<meta name="twitter:description" content="${data.description}" />`}
           </p>
         )}
         {/* Twitter - Image */}
         {data.image && (
-          <p>&lt;meta name="twitter:image" content="{data.image}" /&gt;</p>
+          <p>{`<meta name="twitter:image" content="${data.image}" />`}</p>
         )}
         {/* Twitter - Image Alt */}
         {data.alt && (
-          <p>&lt;meta name="twitter:image:alt" content="{data.alt}" /&gt;</p>
+          <p>{`<meta name="twitter:image:alt" content="${data.alt}" />`}</p>
         )}
       </div>
 
@@ -87,31 +84,30 @@ function Output({ data }: { data: any }) {
           data.alt) && (
           <>
             <br />
-            <p className="comment">&lt;!-- Open Graph Meta Tags --&gt;</p>
+            <p className="comment">{`<!-- Open Graph Meta Tags -->`}</p>
           </>
         )}
         {/* OG -Title */}
         {data.title && (
-          <p>&lt;meta property="og:title" content="{data.title}" /&gt;</p>
+          <p>{`<meta property="og:title" content="${data.title}" />`}</p>
         )}
         {/* OG - Description */}
         {data.description && (
           <p>
-            &lt;meta property="og:description" content="{data.description}"
-            /&gt;
+            {`<meta property="og:description" content="${data.description}" />`}
           </p>
         )}
         {/* OG - URL */}
         {data.url && (
-          <p>&lt;meta property="og:url" content="{data.url}" /&gt;</p>
+          <p>{`<meta property="og:url" content="${data.url}" />`}</p>
         )}
         {/* OG - Image */}
         {data.image && (
-          <p>&lt;meta property="og:image" content="{data.image}" /&gt;</p>
+          <p>{`<meta property="og:image" content="${data.image}" />`}</p>
         )}
         {/* OG - Image Alt */}
         {data.alt && (
-          <p>&lt;meta property="og:image:alt" content="{data.alt}" /&gt;</p>
+          <p>{`<meta property="og:image:alt" content="${data.alt}" />`}</p>
         )}
       </div>
 
@@ -120,11 +116,11 @@ function Output({ data }: { data: any }) {
         {data.title && (
           <>
             <br />
-            <p className="comment">&lt;!-- Facebook Meta Tags --&gt;</p>
+            <p className="comment">{`<!-- Facebook Meta Tags -->`}</p>
           </>
         )}
         {data.title && (
-          <p>&lt;meta property="og:site_name" content="{data.title}" /&gt;</p>
+          <p>{`<meta property="og:site_name" content="${data.title}" />`}</p>
         )}
       </div>
       {/* MakeMeta */}
@@ -137,7 +133,7 @@ function Output({ data }: { data: any }) {
           <>
             <br />
             <p className="comment">
-              &lt;!-- Meta Tags generated using https://makemeta.app --&gt;
+              {`<!-- Meta Tags generated using https://makemeta.app -->`}
             </p>
           </>
         )}
