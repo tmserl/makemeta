@@ -13,10 +13,14 @@ function Output({ data }: { data: any }) {
       ? `<meta name="twitter:title" content="${data.title}" />\n`
       : '') +
     (data.twitter
-      ? `<meta name="twitter:site" content="${data.twitter}" />\n`
+      ? `<meta name="twitter:site" content="${
+          (data.twitter.charAt(0) === '@' ? '' : '@') + data.twitter
+        }" />\n`
       : '') +
     (data.twitter
-      ? `<meta name="twitter:creator" content="${data.twitter}" />\n`
+      ? `<meta name="twitter:creator" content="${
+          (data.twitter.charAt(0) === '@' ? '' : '@') + data.twitter
+        }" />\n`
       : '') +
     (data.description
       ? `<meta name="twitter:description" content="${data.description}" />\n`
