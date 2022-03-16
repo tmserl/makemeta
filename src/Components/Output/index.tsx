@@ -44,7 +44,9 @@ function Output({ data }: { data: any }) {
     (data.image
       ? `<meta property="og:image" content="${data.image}" />\n`
       : '') +
-    (data.alt ? `<meta property="og:image:alt" content="${data.alt}" />` : '') +
+    (data.alt
+      ? `<meta property="og:image:alt" content="${data.alt}" />\n`
+      : '') +
     (data.title ? `\n<!-- Facebook Meta Tags -->\n` : '') +
     (data.title
       ? `<meta property="og:site_name" content="${data.title}" />\n`
@@ -192,9 +194,18 @@ function Output({ data }: { data: any }) {
       </div>
 
       {/* Copy to Clipboard */}
-      <button onClick={() => navigator.clipboard.writeText(clipboardContent)}>
-        Copy
-      </button>
+      {(data.title ||
+        data.description ||
+        data.twitter ||
+        data.image ||
+        data.alt) && (
+        <button
+          className="btn-copy"
+          onClick={() => navigator.clipboard.writeText(clipboardContent)}
+        >
+          Copy
+        </button>
+      )}
     </section>
   );
 }

@@ -32,6 +32,30 @@
   color: #9c9c9c;
 }
 
+button {
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #f3f3f3;
+  padding: 0.25rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px #9c9c9c solid;
+  outline: none;
+}
+
+button:hover {
+  background-color: #e4e4e4;
+}
+
+button:active {
+  background-color: #cfcfcf;
+}
+
 @media screen and (max-width: 800px) {
   .ta-da {
     transform: translate(2.5rem, -2rem);
