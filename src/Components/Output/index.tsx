@@ -10,9 +10,7 @@ function Output({ data }: { data: any }) {
       ? `<meta name="twitter:card" content="summary_large_image" />\n`
       : '') +
     (data.title
-      ? `<meta name="twitter:title" content="${
-          (data.twitter.charAt(0) === '@' ? '' : '@') + data.title
-        }" />\n`
+      ? `<meta name="twitter:title" content="${data.title}" />\n`
       : '') +
     (data.twitter
       ? `<meta name="twitter:site" content="${data.twitter}" />\n`
@@ -43,7 +41,7 @@ function Output({ data }: { data: any }) {
       ? `<meta property="og:image" content="${data.image}" />\n`
       : '') +
     (data.alt ? `<meta property="og:image:alt" content="${data.alt}" />` : '') +
-    (data.title ? `\n\n<!-- Facebook Meta Tags -->\n` : '') +
+    (data.title ? `\n<!-- Facebook Meta Tags -->\n` : '') +
     (data.title
       ? `<meta property="og:site_name" content="${data.title}" />\n`
       : '') +
