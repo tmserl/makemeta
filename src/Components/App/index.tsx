@@ -32,7 +32,10 @@ function App() {
     setData((values) => ({ ...values, [name]: value }));
   }
 
-  function handleCounter(e: React.ChangeEvent<HTMLInputElement>, index: any) {
+  function handleCounter(
+    e: React.ChangeEvent<HTMLInputElement>,
+    index: number
+  ) {
     setCounter([
       ...counter.slice(0, index),
       e.target.value.length,
