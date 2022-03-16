@@ -1,8 +1,35 @@
 import './Output.css';
 
 function Output({ data }: { data: any }) {
+  let clipboardContent = `<title>${data.title}</title>
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${data.title}" />
+  <meta name="twitter:site" content="${data.twitter}" />
+  <meta name="twitter:creator" content="${data.twitter}" />
+  <meta name="twitter:description" content="${data.description}" />
+  <meta name="twitter:image" content="${data.image}" />
+  <meta name="twitter:image:alt" content="${data.alt}" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="${data.title}" />
+  <meta property="og:description" content="${data.description}" />
+  <meta property="og:url" content="${data.url}" />
+  <meta property="og:image" content="${data.image}" />
+  <meta property="og:image:alt" content="${data.alt}" />
+  
+  <!-- Facebook Meta Tags -->
+  <meta property="og:site_name" content="${data.title}" />
+  
+  <!-- Meta Tags generated using https://makemeta.app -->
+  `;
+
   return (
     <section className="output wrapper-sm">
+      <button onClick={() => navigator.clipboard.writeText(clipboardContent)}>
+        Copy
+      </button>
       <p className="ta-da">Ta da!</p>
       {!data.title &&
         !data.description &&
