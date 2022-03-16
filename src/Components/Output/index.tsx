@@ -1,35 +1,57 @@
 import './Output.css';
 
 function Output({ data }: { data: any }) {
-  let clipboardContent = `<title>${data.title}</title>
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="${data.title}" />
-  <meta name="twitter:site" content="${data.twitter}" />
-  <meta name="twitter:creator" content="${data.twitter}" />
-  <meta name="twitter:description" content="${data.description}" />
-  <meta name="twitter:image" content="${data.image}" />
-  <meta name="twitter:image:alt" content="${data.alt}" />
-  
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="${data.title}" />
-  <meta property="og:description" content="${data.description}" />
-  <meta property="og:url" content="${data.url}" />
-  <meta property="og:image" content="${data.image}" />
-  <meta property="og:image:alt" content="${data.alt}" />
-  
-  <!-- Facebook Meta Tags -->
-  <meta property="og:site_name" content="${data.title}" />
-  
-  <!-- Meta Tags generated using https://makemeta.app -->
-  `;
+  let clipboardContent =
+    (data.title ? `<title>${data.title}</title>\n\n` : '') +
+    (data.title || data.description || data.twitter || data.image || data.alt
+      ? `<!-- Twitter Meta Tags -->\n`
+      : '') +
+    (data.image
+      ? `<meta name="twitter:card" content="summary_large_image" />\n`
+      : '') +
+    (data.title
+      ? `<meta name="twitter:title" content="${
+          (data.twitter.charAt(0) === '@' ? '' : '@') + data.title
+        }" />\n`
+      : '') +
+    (data.twitter
+      ? `<meta name="twitter:site" content="${data.twitter}" />\n`
+      : '') +
+    (data.twitter
+      ? `<meta name="twitter:creator" content="${data.twitter}" />\n`
+      : '') +
+    (data.description
+      ? `<meta name="twitter:description" content="${data.description}" />\n`
+      : '') +
+    (data.image
+      ? `<meta name="twitter:image" content="${data.image}" />\n`
+      : '') +
+    (data.alt
+      ? `<meta name="twitter:image:alt" content="${data.alt}" />\n`
+      : '') +
+    (data.title || data.description || data.twitter || data.image || data.alt
+      ? `\n<!-- Open Graph Meta Tags -->\n`
+      : '') +
+    (data.title
+      ? `<meta property="og:title" content="${data.title}" />\n`
+      : '') +
+    (data.description
+      ? `<meta property="og:description" content="${data.description}" />\n`
+      : '') +
+    (data.url ? `<meta property="og:url" content="${data.url}" />\n` : '') +
+    (data.image
+      ? `<meta property="og:image" content="${data.image}" />\n`
+      : '') +
+    (data.alt ? `<meta property="og:image:alt" content="${data.alt}" />` : '') +
+    (data.title ? `\n\n<!-- Facebook Meta Tags -->\n` : '') +
+    (data.title
+      ? `<meta property="og:site_name" content="${data.title}" />\n`
+      : '') +
+    `\n<!-- Meta Tags generated using https://makemeta.app -->
+    `;
 
   return (
     <section className="output wrapper-sm">
-      <button onClick={() => navigator.clipboard.writeText(clipboardContent)}>
-        Copy
-      </button>
       <p className="ta-da">Ta da!</p>
       {!data.title &&
         !data.description &&
@@ -150,6 +172,7 @@ function Output({ data }: { data: any }) {
           <p>{`<meta property="og:site_name" content="${data.title}" />`}</p>
         )}
       </div>
+
       {/* MakeMeta */}
       <div className="makemeta">
         {(data.title ||
@@ -165,6 +188,11 @@ function Output({ data }: { data: any }) {
           </>
         )}
       </div>
+
+      {/* Copy to Clipboard */}
+      <button onClick={() => navigator.clipboard.writeText(clipboardContent)}>
+        Copy
+      </button>
     </section>
   );
 }
