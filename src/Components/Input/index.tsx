@@ -14,10 +14,10 @@ function Input({
   data: any;
   counter: any;
 }) {
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [isHintClicked, setIsHintClicked] = useState<boolean>(false);
 
   function hintToggler() {
-    setToggle(!toggle);
+    setIsHintClicked(!isHintClicked);
   }
 
   return (
@@ -53,7 +53,9 @@ function Input({
             handleCounter(e, 0);
           }}
         />
-        {toggle && <Hint hint={hints.title} toggle={toggle} />}
+        {isHintClicked && (
+          <Hint hint={hints.title} isHintClicked={isHintClicked} />
+        )}
         <label>
           How would you describe your site?{' '}
           <div
@@ -74,7 +76,9 @@ function Input({
             handleCounter(e, 1);
           }}
         />
-        {toggle && <Hint hint={hints.description} toggle={toggle} />}
+        {isHintClicked && (
+          <Hint hint={hints.description} isHintClicked={isHintClicked} />
+        )}
         <label>What's the URL for your site?</label>
         <input
           placeholder="https://makemeta.app"
@@ -85,7 +89,9 @@ function Input({
             handleChange(e);
           }}
         />
-        {toggle && <Hint hint={hints.url} toggle={toggle} />}
+        {isHintClicked && (
+          <Hint hint={hints.url} isHintClicked={isHintClicked} />
+        )}
         <label>What's your Twitter handle?</label>
         <input
           placeholder="@tmserl_"
@@ -96,7 +102,9 @@ function Input({
             handleChange(e);
           }}
         />
-        {toggle && <Hint hint={hints.twitter} toggle={toggle} />}
+        {isHintClicked && (
+          <Hint hint={hints.twitter} isHintClicked={isHintClicked} />
+        )}
         <label>Link (URL) to an image?</label>
         <input
           placeholder="https://social-card-image.xyz/"
@@ -107,7 +115,9 @@ function Input({
             handleChange(e);
           }}
         />
-        {toggle && <Hint hint={hints.img} toggle={toggle} />}
+        {isHintClicked && (
+          <Hint hint={hints.img} isHintClicked={isHintClicked} />
+        )}
         <label>
           What's the alt text for your image?{' '}
           <div
@@ -128,7 +138,9 @@ function Input({
             handleCounter(e, 2);
           }}
         />
-        {toggle && <Hint hint={hints.alt} toggle={toggle} />}
+        {isHintClicked && (
+          <Hint hint={hints.alt} isHintClicked={isHintClicked} />
+        )}
       </form>
     </section>
   );
