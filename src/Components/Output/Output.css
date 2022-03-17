@@ -48,14 +48,6 @@ button {
   outline: none;
 }
 
-/* button:hover {
-  background-color: #e4e4e4;
-} */
-
-/* button:active {
-  background-color: #cfcfcf;
-} */
-
 @media screen and (max-width: 800px) {
   .ta-da {
     transform: translate(2.5rem, -2rem);

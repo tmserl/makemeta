@@ -4,7 +4,12 @@ import './Output.css';
 function Output({ data }: { data: any }) {
   let clipboardContent =
     (data.title ? `<title>${data.title}</title>\n\n` : '') +
-    (data.title || data.description || data.twitter || data.image || data.alt
+    (data.title ||
+    data.description ||
+    data.url ||
+    data.twitter ||
+    data.image ||
+    data.alt
       ? `<!-- Twitter Meta Tags -->\n`
       : '') +
     (data.image
@@ -67,6 +72,7 @@ function Output({ data }: { data: any }) {
       {!data.title &&
         !data.description &&
         !data.twitter &&
+        !data.url &&
         !data.image &&
         !data.alt && (
           <div className="loading">
@@ -188,6 +194,7 @@ function Output({ data }: { data: any }) {
       <div className="makemeta">
         {(data.title ||
           data.description ||
+          data.url ||
           data.twitter ||
           data.image ||
           data.alt) && (
@@ -203,6 +210,7 @@ function Output({ data }: { data: any }) {
       {/* Copy to Clipboard */}
       {(data.title ||
         data.description ||
+        data.url ||
         data.twitter ||
         data.image ||
         data.alt) && (
