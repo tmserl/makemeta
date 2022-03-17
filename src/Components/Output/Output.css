@@ -48,13 +48,13 @@ button {
   outline: none;
 }
 
-button:hover {
+/* button:hover {
   background-color: #e4e4e4;
-}
+} */
 
-button:active {
+/* button:active {
   background-color: #cfcfcf;
-}
+} */
 
 @media screen and (max-width: 800px) {
   .ta-da {

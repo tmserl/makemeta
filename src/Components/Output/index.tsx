@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import './Output.css';
 
 function Output({ data }: { data: any }) {
@@ -55,7 +56,13 @@ function Output({ data }: { data: any }) {
     `;
 
   return (
-    <section className="output wrapper-sm">
+    <motion.section
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1, type: 'spring', stiffness: 200 }}
+      viewport={{ once: true }}
+      className="output wrapper-sm"
+    >
       <p className="ta-da">Ta da!</p>
       {!data.title &&
         !data.description &&
@@ -199,14 +206,16 @@ function Output({ data }: { data: any }) {
         data.twitter ||
         data.image ||
         data.alt) && (
-        <button
+        <motion.button
           className="btn-copy"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 1.25 }}
           onClick={() => navigator.clipboard.writeText(clipboardContent)}
         >
           Copy
-        </button>
+        </motion.button>
       )}
-    </section>
+    </motion.section>
   );
 }
 
