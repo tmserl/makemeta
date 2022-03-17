@@ -8,7 +8,7 @@ function Hint({
   isHintClicked: boolean;
 }) {
   return (
-    <div className={isHintClicked ? 'hint' : ''}>
+    <div className="hint">
       <p>{hint}</p>
     </div>
   );

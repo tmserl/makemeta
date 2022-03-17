@@ -6,25 +6,5 @@
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 13px;
   border: 2px #9c9c9c solid;
-  /* Transition */
-  animation: transition 0.75s cubic-bezier(0.42, 0, 0.55, 1.5) forwards;
-}
-
-@keyframes transition {
-  0% {
-    padding-top: 0;
-    padding-bottom: 0;
-    transform: translateY(-1.95rem);
-    color: rgba(255, 255, 255, 0);
-    background-color: rgba(255, 255, 255, 0);
-  }
-  30% {
-    color: rgba(255, 255, 255, 0);
-  }
-  100% {
-    color: var(--almost-black);
-    margin-bottom: 1rem;
-    background-color: #ffffff;
-    transform: translateY(-1.25rem);
-  }
+  background-color: #ffffff;
 }

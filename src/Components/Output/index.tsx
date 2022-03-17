@@ -68,7 +68,7 @@ function Output({ data }: { data: any }) {
       viewport={{ once: true }}
       className="output wrapper-sm"
     >
-      <p className="ta-da">Ta da!</p>
+      <p className="ta-da">Ta-da!</p>
       {!data.title &&
         !data.description &&
         !data.twitter &&

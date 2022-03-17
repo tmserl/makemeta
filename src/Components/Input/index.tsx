@@ -1,7 +1,13 @@
 import './Input.css';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Hint from '../Hint';
 import hints from '../../lib/hints';
+
+const hintVariants = {
+  open: { opacity: 1, y: 0 },
+  closed: { opacity: 0, y: -10 },
+};
 
 function Input({
   handleChange,
@@ -53,9 +59,19 @@ function Input({
             handleCounter(e, 0);
           }}
         />
-        {isHintClicked && (
-          <Hint hint={hints.title} isHintClicked={isHintClicked} />
-        )}
+        <motion.div
+          animate={isHintClicked ? 'open' : 'closed'}
+          variants={hintVariants}
+          exit={{ opacity: 0 }}
+        >
+          <AnimatePresence>
+            {isHintClicked && (
+              <motion.div exit={{ opacity: 0, y: -10 }}>
+                <Hint hint={hints.title} isHintClicked={isHintClicked} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <label>
           How would you describe your site?{' '}
           <div
