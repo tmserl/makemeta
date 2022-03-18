@@ -6,7 +6,7 @@ import hints from '../../lib/hints';
 
 const hintVariants = {
   open: { opacity: 1, y: 0 },
-  closed: { opacity: 0, y: -10 },
+  closed: { opacity: 0, y: -25 },
 };
 
 function Input({
@@ -64,11 +64,10 @@ function Input({
         <motion.div
           animate={isHintClicked ? 'open' : 'closed'}
           variants={hintVariants}
-          exit={{ opacity: 0 }}
         >
           <AnimatePresence>
             {isHintClicked && (
-              <motion.div exit={{ opacity: 0, y: -10 }}>
+              <motion.div exit={{ opacity: 0, y: 8 }}>
                 <Hint hint={hints.title} isHintClicked={isHintClicked} />
               </motion.div>
             )}
@@ -94,9 +93,18 @@ function Input({
             handleCounter(e, 1);
           }}
         />
-        {isHintClicked && (
-          <Hint hint={hints.description} isHintClicked={isHintClicked} />
-        )}
+        <motion.div
+          animate={isHintClicked ? 'open' : 'closed'}
+          variants={hintVariants}
+        >
+          <AnimatePresence>
+            {isHintClicked && (
+              <motion.div exit={{ opacity: 0, y: 8 }}>
+                <Hint hint={hints.description} isHintClicked={isHintClicked} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <label>What's the URL for your site?</label>
         <input
           placeholder="https://makemeta.app"
@@ -107,9 +115,18 @@ function Input({
             handleChange(e);
           }}
         />
-        {isHintClicked && (
-          <Hint hint={hints.url} isHintClicked={isHintClicked} />
-        )}
+        <motion.div
+          animate={isHintClicked ? 'open' : 'closed'}
+          variants={hintVariants}
+        >
+          <AnimatePresence>
+            {isHintClicked && (
+              <motion.div exit={{ opacity: 0, y: 8 }}>
+                <Hint hint={hints.url} isHintClicked={isHintClicked} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <label>What's your Twitter handle?</label>
         <input
           placeholder="@tmserl_"
@@ -133,9 +150,18 @@ function Input({
             handleChange(e);
           }}
         />
-        {isHintClicked && (
-          <Hint hint={hints.img} isHintClicked={isHintClicked} />
-        )}
+        <motion.div
+          animate={isHintClicked ? 'open' : 'closed'}
+          variants={hintVariants}
+        >
+          <AnimatePresence>
+            {isHintClicked && (
+              <motion.div exit={{ opacity: 0, y: 8 }}>
+                <Hint hint={hints.img} isHintClicked={isHintClicked} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <label>
           What's the alt text for your image?{' '}
           <div
@@ -156,9 +182,18 @@ function Input({
             handleCounter(e, 2);
           }}
         />
-        {isHintClicked && (
-          <Hint hint={hints.alt} isHintClicked={isHintClicked} />
-        )}
+        <motion.div
+          animate={isHintClicked ? 'open' : 'closed'}
+          variants={hintVariants}
+        >
+          <AnimatePresence>
+            {isHintClicked && (
+              <motion.div exit={{ opacity: 0, y: 8 }}>
+                <Hint hint={hints.alt} isHintClicked={isHintClicked} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
       </form>
     </section>
   );
