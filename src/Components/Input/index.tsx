@@ -30,14 +30,16 @@ function Input({
     <section>
       <form className="wrapper-sm">
         <p className="start-here">Start here</p>
-        <div
+        <motion.div
+          whileHover={{ scale: 1.05, color: '#bbbbbb' }}
+          whileTap={{ scale: 1.15 }}
           onClick={() => {
             hintToggler();
           }}
           className="hint-toggle"
         >
           ?
-        </div>
+        </motion.div>
         <label>
           What's the name of your site?{' '}
           <div
