@@ -1,12 +1,78 @@
+import { motion } from 'framer-motion';
 import './Output.css';
 
 function Output({ data }: { data: any }) {
+  let clipboardContent =
+    (data.title ? `<title>${data.title}</title>\n\n` : '') +
+    (data.title ||
+    data.description ||
+    data.url ||
+    data.twitter ||
+    data.image ||
+    data.alt
+      ? `<!-- Twitter Meta Tags -->\n`
+      : '') +
+    (data.image
+      ? `<meta name="twitter:card" content="summary_large_image" />\n`
+      : '') +
+    (data.title
+      ? `<meta name="twitter:title" content="${data.title}" />\n`
+      : '') +
+    (data.twitter
+      ? `<meta name="twitter:site" content="${
+          (data.twitter.charAt(0) === '@' ? '' : '@') + data.twitter
+        }" />\n`
+      : '') +
+    (data.twitter
+      ? `<meta name="twitter:creator" content="${
+          (data.twitter.charAt(0) === '@' ? '' : '@') + data.twitter
+        }" />\n`
+      : '') +
+    (data.description
+      ? `<meta name="twitter:description" content="${data.description}" />\n`
+      : '') +
+    (data.image
+      ? `<meta name="twitter:image" content="${data.image}" />\n`
+      : '') +
+    (data.alt
+      ? `<meta name="twitter:image:alt" content="${data.alt}" />\n`
+      : '') +
+    (data.title || data.description || data.twitter || data.image || data.alt
+      ? `\n<!-- Open Graph Meta Tags -->\n`
+      : '') +
+    (data.title
+      ? `<meta property="og:title" content="${data.title}" />\n`
+      : '') +
+    (data.description
+      ? `<meta property="og:description" content="${data.description}" />\n`
+      : '') +
+    (data.url ? `<meta property="og:url" content="${data.url}" />\n` : '') +
+    (data.image
+      ? `<meta property="og:image" content="${data.image}" />\n`
+      : '') +
+    (data.alt
+      ? `<meta property="og:image:alt" content="${data.alt}" />\n`
+      : '') +
+    (data.title ? `\n<!-- Facebook Meta Tags -->\n` : '') +
+    (data.title
+      ? `<meta property="og:site_name" content="${data.title}" />\n`
+      : '') +
+    `\n<!-- Meta Tags generated using https://makemeta.app -->
+    `;
+
   return (
-    <section className="output wrapper-sm">
-      <p className="ta-da">Ta da!</p>
+    <motion.section
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1, type: 'spring', stiffness: 200 }}
+      viewport={{ once: true }}
+      className="output wrapper-sm"
+    >
+      <p className="ta-da">Ta-da!</p>
       {!data.title &&
         !data.description &&
         !data.twitter &&
+        !data.url &&
         !data.image &&
         !data.alt && (
           <div className="loading">
@@ -123,10 +189,12 @@ function Output({ data }: { data: any }) {
           <p>{`<meta property="og:site_name" content="${data.title}" />`}</p>
         )}
       </div>
+
       {/* MakeMeta */}
       <div className="makemeta">
         {(data.title ||
           data.description ||
+          data.url ||
           data.twitter ||
           data.image ||
           data.alt) && (
@@ -138,7 +206,24 @@ function Output({ data }: { data: any }) {
           </>
         )}
       </div>
-    </section>
+
+      {/* Copy to Clipboard */}
+      {(data.title ||
+        data.description ||
+        data.url ||
+        data.twitter ||
+        data.image ||
+        data.alt) && (
+        <motion.button
+          className="btn-copy"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 1.25 }}
+          onClick={() => navigator.clipboard.writeText(clipboardContent)}
+        >
+          Copy
+        </motion.button>
+      )}
+    </motion.section>
   );
 }
 

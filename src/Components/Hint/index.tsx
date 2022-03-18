@@ -1,8 +1,14 @@
 import './Hint.css';
 
-function Hint({ hint, toggle }: { hint: string; toggle: boolean }) {
+function Hint({
+  hint,
+  isHintClicked,
+}: {
+  hint: string;
+  isHintClicked: boolean;
+}) {
   return (
-    <div className={toggle ? 'hint' : ''}>
+    <div className="hint">
       <p>{hint}</p>
     </div>
   );

@@ -1,7 +1,13 @@
 import './Input.css';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Hint from '../Hint';
 import hints from '../../lib/hints';
+
+const hintVariants = {
+  open: { opacity: 1, y: 0 },
+  closed: { opacity: 0, y: -25 },
+};
 
 function Input({
   handleChange,
@@ -14,24 +20,26 @@ function Input({
   data: any;
   counter: any;
 }) {
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [isHintClicked, setIsHintClicked] = useState<boolean>(false);
 
   function hintToggler() {
-    setToggle(!toggle);
+    setIsHintClicked(!isHintClicked);
   }
 
   return (
     <section>
       <form className="wrapper-sm">
         <p className="start-here">Start here</p>
-        <div
+        <motion.div
+          whileHover={{ scale: 1.05, color: '#bbbbbb' }}
+          whileTap={{ scale: 1.15 }}
           onClick={() => {
             hintToggler();
           }}
           className="hint-toggle"
         >
           ?
-        </div>
+        </motion.div>
         <label>
           What's the name of your site?{' '}
           <div
@@ -53,7 +61,18 @@ function Input({
             handleCounter(e, 0);
           }}
         />
-        {toggle && <Hint hint={hints.title} toggle={toggle} />}
+        <motion.div
+          animate={isHintClicked ? 'open' : 'closed'}
+          variants={hintVariants}
+        >
+          <AnimatePresence>
+            {isHintClicked && (
+              <motion.div exit={{ opacity: 0, y: 8 }}>
+                <Hint hint={hints.title} isHintClicked={isHintClicked} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <label>
           How would you describe your site?{' '}
           <div
@@ -74,7 +93,18 @@ function Input({
             handleCounter(e, 1);
           }}
         />
-        {toggle && <Hint hint={hints.description} toggle={toggle} />}
+        <motion.div
+          animate={isHintClicked ? 'open' : 'closed'}
+          variants={hintVariants}
+        >
+          <AnimatePresence>
+            {isHintClicked && (
+              <motion.div exit={{ opacity: 0, y: 8 }}>
+                <Hint hint={hints.description} isHintClicked={isHintClicked} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <label>What's the URL for your site?</label>
         <input
           placeholder="https://makemeta.app"
@@ -85,7 +115,18 @@ function Input({
             handleChange(e);
           }}
         />
-        {toggle && <Hint hint={hints.url} toggle={toggle} />}
+        <motion.div
+          animate={isHintClicked ? 'open' : 'closed'}
+          variants={hintVariants}
+        >
+          <AnimatePresence>
+            {isHintClicked && (
+              <motion.div exit={{ opacity: 0, y: 8 }}>
+                <Hint hint={hints.url} isHintClicked={isHintClicked} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <label>What's your Twitter handle?</label>
         <input
           placeholder="@tmserl_"
@@ -96,7 +137,9 @@ function Input({
             handleChange(e);
           }}
         />
-        {toggle && <Hint hint={hints.twitter} toggle={toggle} />}
+        {isHintClicked && (
+          <Hint hint={hints.twitter} isHintClicked={isHintClicked} />
+        )}
         <label>Link (URL) to an image?</label>
         <input
           placeholder="https://social-card-image.xyz/"
@@ -107,7 +150,18 @@ function Input({
             handleChange(e);
           }}
         />
-        {toggle && <Hint hint={hints.img} toggle={toggle} />}
+        <motion.div
+          animate={isHintClicked ? 'open' : 'closed'}
+          variants={hintVariants}
+        >
+          <AnimatePresence>
+            {isHintClicked && (
+              <motion.div exit={{ opacity: 0, y: 8 }}>
+                <Hint hint={hints.img} isHintClicked={isHintClicked} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <label>
           What's the alt text for your image?{' '}
           <div
@@ -128,7 +182,18 @@ function Input({
             handleCounter(e, 2);
           }}
         />
-        {toggle && <Hint hint={hints.alt} toggle={toggle} />}
+        <motion.div
+          animate={isHintClicked ? 'open' : 'closed'}
+          variants={hintVariants}
+        >
+          <AnimatePresence>
+            {isHintClicked && (
+              <motion.div exit={{ opacity: 0, y: 8 }}>
+                <Hint hint={hints.alt} isHintClicked={isHintClicked} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
       </form>
     </section>
   );
