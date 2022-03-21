@@ -44,7 +44,13 @@ function Changelog({
                   </div>
                   <div className="changelog--content">
                     <h3>{item.title}</h3>
-                    <p>{item.description}</p>
+                    {item.description.map((paragraph) => (
+                      <>
+                        <p className="changelog--description" key={paragraph}>
+                          {paragraph}
+                        </p>
+                      </>
+                    ))}
                   </div>
                 </article>
                 <hr className="line" />
