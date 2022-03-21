@@ -30,7 +30,12 @@ function Changelog({
           exit="hidden"
         >
           <motion.div className="changelog" variants={changelogVariants}>
-            <p onClick={() => setShowChangelog(!showChangelog)}>Close</p>
+            <p
+              className="changelog--close"
+              onClick={() => setShowChangelog(!showChangelog)}
+            >
+              Close
+            </p>
             {changelog.map((item) => (
               <>
                 <article className="changelog--item" key={item.date}>

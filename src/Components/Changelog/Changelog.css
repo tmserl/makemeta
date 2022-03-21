@@ -11,9 +11,16 @@
 .changelog {
   max-width: 850px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 50px 20px;
   background: #ffffff;
   border-radius: 13px;
+}
+
+.changelog--close {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
 
 .changelog--item {
