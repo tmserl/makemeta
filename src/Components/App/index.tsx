@@ -4,6 +4,7 @@ import Header from '../Header';
 import Input from '../Input';
 import Output from '../Output';
 import Footer from '../Footer';
+import Changelog from '../Changelog';
 
 interface iData {
   title: string;
@@ -18,6 +19,8 @@ interface iData {
 }
 
 function App() {
+  const [showChangelog, setShowChangelog] = useState<boolean>(false);
+
   const [data, setData] = useState<iData>({
     title: '',
     description: '',
@@ -45,7 +48,14 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header
+        showChangelog={showChangelog}
+        setShowChangelog={setShowChangelog}
+      />
+      <Changelog
+        showChangelog={showChangelog}
+        setShowChangelog={setShowChangelog}
+      />
       <Input
         handleChange={handleChange}
         handleCounter={handleCounter}
