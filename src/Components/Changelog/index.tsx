@@ -1,10 +1,15 @@
 import './Changelog.css';
-import { motion, AnimatePresence, MotionConfig } from 'framer-motion';
+import { motion, AnimatePresence, MotionConfig, m } from 'framer-motion';
 import React from 'react';
 
 const backdropVariants = {
-  visible: { opacity: 1 },
   hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
+const changelogVariants = {
+  hidden: { y: '-50vh', opacity: 0 },
+  visible: { y: '120px', opacity: 1, transition: { delay: 0.25 } },
 };
 
 function Changelog({
@@ -22,7 +27,14 @@ function Changelog({
           variants={backdropVariants}
           initial="hidden"
           animate="visible"
-        ></motion.div>
+          exit="hidden"
+        >
+          <motion.div className="changelog" variants={changelogVariants}>
+            <p onClick={() => setShowChangelog(!showChangelog)}>Close</p>
+            <h3>Changelog now added</h3>
+            <p>Added changelog to MakeMeta</p>
+          </motion.div>
+        </motion.div>
       )}
     </AnimatePresence>
   );
