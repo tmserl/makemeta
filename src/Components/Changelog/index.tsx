@@ -31,8 +31,25 @@ function Changelog({
         >
           <motion.div className="changelog" variants={changelogVariants}>
             <p onClick={() => setShowChangelog(!showChangelog)}>Close</p>
-            <h3>Changelog now added</h3>
-            <p>Added changelog to MakeMeta</p>
+            <article className="changelog--item">
+              <div className="changelog--meta">
+                <p>Mar 1, 2022</p>
+              </div>
+              <div className="changelog--content">
+                <h3>Character Count</h3>
+                <p>Certain input fields now have a character count.</p>
+              </div>
+            </article>
+            <hr className="line" />
+            <article className="changelog--item">
+              <div className="changelog--meta">
+                <p>Feb 20, 2022</p>
+              </div>
+              <div className="changelog--content">
+                <h3>MakeMeta is Live</h3>
+                <p>Launched MakeMeta</p>
+              </div>
+            </article>
           </motion.div>
         </motion.div>
       )}
