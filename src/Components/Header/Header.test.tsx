@@ -5,8 +5,8 @@ describe('Header', () => {
   it('renders MakeMeta title and subtitle', () => {
     render(<Header />);
 
-    const heading = screen.getByText('MakeMeta');
-    const subtitle = screen.getByText('Generate Meta Tags for your website');
+    const heading = screen.getByText(/MakeMeta/i);
+    const subtitle = screen.getByText(/Generate Meta Tags for your website/i);
 
     expect(heading).toBeInTheDocument();
     expect(subtitle).toBeInTheDocument();
