@@ -8,8 +8,8 @@ describe('Header', () => {
     const heading = screen.getByText(/MakeMeta/i);
     const subtitle = screen.getByText(/Generate Meta Tags for your website/i);
 
-    expect(heading).toBeInTheDocument();
-    expect(subtitle).toBeInTheDocument();
+    expect(heading).toBeVisible();
+    expect(subtitle).toBeVisible();
   });
 
   it('renders Changelog button', () => {
@@ -17,7 +17,7 @@ describe('Header', () => {
 
     const changelog = screen.getByText("What's new?");
 
-    expect(changelog).toBeInTheDocument();
+    expect(changelog).toBeVisible();
     expect(changelog).toHaveClass('whats-new');
   });
 });
