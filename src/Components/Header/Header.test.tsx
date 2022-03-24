@@ -2,9 +2,11 @@ import { render, screen } from '@testing-library/react';
 import Header from './index';
 
 describe('Header', () => {
-  it('renders MakeMeta title and subtitle', () => {
-    render(<Header />);
+  beforeEach(() => {
+    render(<Header showChangelog={false} setShowChangelog={jest.fn()} />);
+  });
 
+  it('renders MakeMeta title and subtitle', () => {
     const heading = screen.getByText(/MakeMeta/i);
     const subtitle = screen.getByText(/Generate Meta Tags for your website/i);
 
@@ -13,8 +15,6 @@ describe('Header', () => {
   });
 
   it('renders Changelog button', () => {
-    render(<Header />);
-
     const changelog = screen.getByText("What's new?");
 
     expect(changelog).toBeVisible();
