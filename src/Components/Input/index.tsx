@@ -37,6 +37,7 @@ function Input({
             hintToggler();
           }}
           className="hint-toggle"
+          id="hint-toggle"
         >
           ?
         </motion.div>

@@ -55,4 +55,9 @@ describe('Input Text', () => {
     const alt = screen.getByText(/What's the alt text for your image?/i);
     expect(alt).toBeVisible();
   });
+
+  it('renders hint toggle button', () => {
+    const hintToggle = screen.getByText('?');
+    expect(hintToggle).toBeVisible();
+  });
 });
