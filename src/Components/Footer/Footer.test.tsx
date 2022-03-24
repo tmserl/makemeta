@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Footer from './index';
+import Footer from '../Footer';
 
 describe('Footer', () => {
   it('renders footer', () => {
