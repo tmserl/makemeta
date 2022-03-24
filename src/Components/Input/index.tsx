@@ -18,7 +18,7 @@ function Input({
   handleChange: any;
   handleCounter: any;
   data: any;
-  counter: any;
+  counter: number[];
 }) {
   const [isHintClicked, setIsHintClicked] = useState<boolean>(false);
 

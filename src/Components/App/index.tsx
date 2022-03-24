@@ -12,12 +12,6 @@ interface iData {
   image: string;
 }
 
-interface iData {
-  title: string;
-  description: string;
-  image: string;
-}
-
 function App() {
   const [showChangelog, setShowChangelog] = useState<boolean>(false);
 
@@ -27,7 +21,7 @@ function App() {
     image: '',
   });
 
-  const [counter, setCounter] = useState([0, 0, 0]);
+  const [counter, setCounter] = useState<number[]>([0, 0, 0]);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const name = e.target.name;
