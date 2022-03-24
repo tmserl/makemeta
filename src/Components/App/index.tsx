@@ -9,7 +9,10 @@ import Changelog from '../Changelog';
 interface iData {
   title: string;
   description: string;
+  url: string;
+  twitter: string;
   image: string;
+  alt: string;
 }
 
 function App() {
@@ -18,7 +21,10 @@ function App() {
   const [data, setData] = useState<iData>({
     title: '',
     description: '',
+    url: '',
+    twitter: '',
     image: '',
+    alt: '',
   });
 
   const [counter, setCounter] = useState<number[]>([0, 0, 0]);

@@ -4,7 +4,10 @@ import Input from '../Input';
 const data = {
   title: 'MakeMeta',
   description: 'Effortlessly generate meta tags for your website.',
-  image: 'https://imagesite.com',
+  url: 'https://makemeta.app',
+  twitter: '@tmserl_',
+  image: 'https://social-card-image.xyz/',
+  alt: 'MakeMeta',
 };
 
 const counter = [0, 0, 0];
