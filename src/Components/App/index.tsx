@@ -4,27 +4,30 @@ import Header from '../Header';
 import Input from '../Input';
 import Output from '../Output';
 import Footer from '../Footer';
+import Changelog from '../Changelog';
 
 interface iData {
   title: string;
   description: string;
+  url: string;
+  twitter: string;
   image: string;
-}
-
-interface iData {
-  title: string;
-  description: string;
-  image: string;
+  alt: string;
 }
 
 function App() {
+  const [showChangelog, setShowChangelog] = useState<boolean>(false);
+
   const [data, setData] = useState<iData>({
     title: '',
     description: '',
+    url: '',
+    twitter: '',
     image: '',
+    alt: '',
   });
 
-  const [counter, setCounter] = useState([0, 0, 0]);
+  const [counter, setCounter] = useState<number[]>([0, 0, 0]);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const name = e.target.name;
@@ -45,7 +48,14 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header
+        showChangelog={showChangelog}
+        setShowChangelog={setShowChangelog}
+      />
+      <Changelog
+        showChangelog={showChangelog}
+        setShowChangelog={setShowChangelog}
+      />
       <Input
         handleChange={handleChange}
         handleCounter={handleCounter}

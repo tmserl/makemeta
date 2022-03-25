@@ -18,7 +18,7 @@ function Input({
   handleChange: any;
   handleCounter: any;
   data: any;
-  counter: any;
+  counter: number[];
 }) {
   const [isHintClicked, setIsHintClicked] = useState<boolean>(false);
 
@@ -37,6 +37,7 @@ function Input({
             hintToggler();
           }}
           className="hint-toggle"
+          id="hint-toggle"
         >
           ?
         </motion.div>
@@ -173,7 +174,7 @@ function Input({
           </div>
         </label>
         <input
-          placeholder="MakeMeta"
+          placeholder="MakeMeta Logo"
           type="text"
           name="alt"
           value={data.alt || ''}
