@@ -1,4 +1,4 @@
-import { queryByText, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Hint from '../Hint';
 
 describe('Hint', () => {
