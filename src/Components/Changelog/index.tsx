@@ -37,10 +37,11 @@ function Changelog({
               Close
             </p>
             {changelog.map((item) => (
-              <div key={item.date}>
+              <div key={item.version}>
                 <article className="changelog--item">
                   <div className="changelog--meta">
                     <p>{item.date}</p>
+                    <p className="changelog--version">{item.version}</p>
                   </div>
                   <div className="changelog--content">
                     <h3>{item.title}</h3>

@@ -40,6 +40,12 @@
   color: var(--dark-gray);
 }
 
+.changelog--version {
+  margin-top: 3px;
+  font-size: 0.75rem;
+  color: var(--medium-gray);
+}
+
 .changelog--content {
   width: 100%;
 }
