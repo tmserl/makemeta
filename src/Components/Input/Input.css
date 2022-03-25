@@ -59,6 +59,7 @@ input {
   border: none;
   resize: none;
 }
+
 input::placeholder {
   color: var(--medium-gray);
 }
@@ -115,5 +116,13 @@ input:focus {
 @media screen and (max-width: 800px) {
   .start-here {
     transform: translate(40px, -32px);
+  }
+
+  input {
+    padding: 8px 15px 8px 15px;
+  }
+
+  input::placeholder {
+    font-size: 0.85rem;
   }
 }

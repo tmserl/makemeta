@@ -50,6 +50,6 @@ button {
 
 @media screen and (max-width: 800px) {
   .ta-da {
-    transform: translate(400x, -32px);
+    transform: translate(40px, -32px);
   }
 }
