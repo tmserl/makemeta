@@ -9,13 +9,10 @@ import Changelog from '../Changelog';
 interface iData {
   title: string;
   description: string;
+  url: string;
+  twitter: string;
   image: string;
-}
-
-interface iData {
-  title: string;
-  description: string;
-  image: string;
+  alt: string;
 }
 
 function App() {
@@ -24,10 +21,13 @@ function App() {
   const [data, setData] = useState<iData>({
     title: '',
     description: '',
+    url: '',
+    twitter: '',
     image: '',
+    alt: '',
   });
 
-  const [counter, setCounter] = useState([0, 0, 0]);
+  const [counter, setCounter] = useState<number[]>([0, 0, 0]);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const name = e.target.name;

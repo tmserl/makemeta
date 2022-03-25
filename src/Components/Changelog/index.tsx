@@ -1,5 +1,5 @@
 import './Changelog.css';
-import { motion, AnimatePresence, MotionConfig, m } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import changelog from '../../lib/changelog';
 
 const backdropVariants = {
@@ -37,24 +37,22 @@ function Changelog({
               Close
             </p>
             {changelog.map((item) => (
-              <>
-                <article className="changelog--item" key={item.date}>
+              <div key={item.date}>
+                <article className="changelog--item">
                   <div className="changelog--meta">
                     <p>{item.date}</p>
                   </div>
                   <div className="changelog--content">
                     <h3>{item.title}</h3>
                     {item.description.map((paragraph) => (
-                      <>
-                        <p className="changelog--description" key={paragraph}>
-                          {paragraph}
-                        </p>
-                      </>
+                      <div key={paragraph}>
+                        <p className="changelog--description">{paragraph}</p>
+                      </div>
                     ))}
                   </div>
                 </article>
                 <hr className="line" />
-              </>
+              </div>
             ))}
           </motion.div>
         </motion.div>
