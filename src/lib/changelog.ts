@@ -7,11 +7,12 @@ interface iChangelog {
 
 const changelog: iChangelog[] = [
   {
-    date: 'Mar X, 2022',
+    date: 'Mar 25, 2022',
     title: 'Behind the Scenes',
     version: '1.4',
     description: [
-      'This update mostly focuses on backend improvements and code refractoring.',
+      'This update focuses mostly on backend improvements and code refactoring.',
+      'Add: Code testing to ensure stable releases.',
       'Fix: A bug that would cause the output meta data to add unnecessary spaces when copying and pasting manually.',
       'Fix: Placeholder text is now an appropriate size on mobile devices.',
     ],
