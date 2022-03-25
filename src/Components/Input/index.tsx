@@ -174,7 +174,7 @@ function Input({
           </div>
         </label>
         <input
-          placeholder="MakeMeta"
+          placeholder="MakeMeta Logo"
           type="text"
           name="alt"
           value={data.alt || ''}
