@@ -9,7 +9,7 @@ form {
 
 .start-here {
   transform: translate(-3rem, -1rem);
-  padding: 1rem;
+  padding: 16px;
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
@@ -26,11 +26,11 @@ form {
   position: absolute;
   color: #d6d6d6;
   background-color: #f3f3f3;
-  top: 1rem;
-  right: 1rem;
-  width: 1.75rem;
-  height: 1.75rem;
-  line-height: 1.75rem;
+  top: 16px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
   border-radius: 50%;
   text-align: center;
   /* Prevent Text Selection */
@@ -44,18 +44,18 @@ form {
 label {
   font-size: 1.25rem;
   font-weight: var(--font-weight-semi-bold);
-  padding-bottom: 0.5rem;
+  padding-bottom: 8px;
 }
 
 input {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   font-family: var(--font-stack);
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: var(--font-weight-semi-bold);
   color: var(--almost-black);
   border-radius: 13px;
-  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  padding: 8px 24px 8px 24px;
   border: none;
   resize: none;
 }
@@ -73,8 +73,8 @@ input:focus {
   display: inline-block;
   font-size: 0.85rem;
   font-weight: 400;
-  margin-left: 0.35rem;
-  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  margin-left: 5.6px;
+  padding: 3.5px 6.5px 3.5px 6.5px;
   border-radius: 5px;
   vertical-align: middle;
 }
@@ -114,6 +114,6 @@ input:focus {
 
 @media screen and (max-width: 800px) {
   .start-here {
-    transform: translate(2.5rem, -2rem);
+    transform: translate(40px, -32px);
   }
 }

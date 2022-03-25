@@ -17,7 +17,7 @@
 
 .ta-da {
   transform: translate(-3rem, -1rem);
-  padding: 1rem;
+  padding: 16px;
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
@@ -38,8 +38,8 @@ button {
   font-size: 1rem;
   font-weight: 600;
   background-color: #f3f3f3;
-  padding: 0.25rem 1.5rem;
-  margin-top: 2rem;
+  padding: 4px 24px;
+  margin-top: 32px;
   border-radius: 10px;
   text-align: center;
   margin-left: auto;
@@ -50,6 +50,6 @@ button {
 
 @media screen and (max-width: 800px) {
   .ta-da {
-    transform: translate(2.5rem, -2rem);
+    transform: translate(400x, -32px);
   }
 }
