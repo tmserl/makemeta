@@ -16,6 +16,8 @@ This project introduced me to React’s conditional rendering, allowing only spe
 
 ### Input form
 
+A clean, simple input form for taking in the relevant information.
+
 ![MakeMeta](/README/makemeta1.png)
 
 ### Meta tag output
@@ -24,4 +26,25 @@ This project introduced me to React’s conditional rendering, allowing only spe
 
 ### Conditional rendering
 
+Each meta tag is dynamically rendered, and hidden if not needed.
+
 ![MakeMeta](/README/makemeta3.gif)
+
+## Scripts
+
+### Running Locally
+
+To run the app locally on `localhost:3000`, use the following commands:
+
+```bash
+npm install
+npm run start
+```
+
+### Testing
+
+A number of unit/integration tests have been set up at the component and app level of MakeMeta. To run the test suite, use the following command:
+
+```bash
+npm test
+```
