@@ -16,7 +16,11 @@ function Footer() {
   return (
     <footer>
       <p>
-        Made with ♥️ by{' '}
+        Made{' '}
+        <a href="" target="_blank" rel="noreferrer">
+          sustainably,
+        </a>{' '}
+        and with ♥️ by{' '}
         <a href="https://tmserl.com" target="_blank" rel="noreferrer">
           Tom Earl
         </a>
