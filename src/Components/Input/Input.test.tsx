@@ -61,6 +61,6 @@ describe('Input Text', () => {
 
   it('renders hint toggle button', () => {
     const hintToggle = screen.getByText('?');
-    expect(hintToggle).toBeVisible();
+    expect(hintToggle).toBeInTheDocument();
   });
 });

@@ -6,7 +6,6 @@ describe('Hint', () => {
     const hintContent = 'This is a hint.';
     render(<Hint hint={hintContent} isHintClicked={true} />);
     const hint = screen.getByText('This is a hint.');
-
     expect(hint).toBeVisible();
   });
 });
