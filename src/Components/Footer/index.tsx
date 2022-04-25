@@ -16,7 +16,15 @@ function Footer() {
   return (
     <footer>
       <p>
-        Made with ♥️ by{' '}
+        Made{' '}
+        <a
+          href="https://www.websitecarbon.com/website/makemeta-app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          sustainably,
+        </a>{' '}
+        and with ♥️ by{' '}
         <a href="https://tmserl.com" target="_blank" rel="noreferrer">
           Tom Earl
         </a>
