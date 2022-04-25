@@ -17,7 +17,11 @@ function Footer() {
     <footer>
       <p>
         Made{' '}
-        <a href="" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.websitecarbon.com/website/makemeta-app/"
+          target="_blank"
+          rel="noreferrer"
+        >
           sustainably,
         </a>{' '}
         and with ♥️ by{' '}
