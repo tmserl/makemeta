@@ -3,7 +3,11 @@ import './Output.css';
 
 function Output({ data }: { data: any }) {
   let clipboardContent =
-    (data.title ? `<title>${data.title}</title>\n\n` : '') +
+    (data.title ? `<title>${data.title}</title>\n` : '') +
+    (data.title ? `<meta name="title" content="${data.title}" />\n` : '') +
+    (data.description
+      ? `<meta name="description" content="${data.description}" />\n\n`
+      : '') +
     (data.title ||
     data.description ||
     data.url ||
@@ -37,8 +41,9 @@ function Output({ data }: { data: any }) {
     (data.alt
       ? `<meta name="twitter:image:alt" content="${data.alt}" />\n`
       : '') +
+    (data.url ? `<meta name="twitter:url" content="${data.url}" />\n` : '') +
     (data.title || data.description || data.twitter || data.image || data.alt
-      ? `\n<!-- Open Graph Meta Tags -->\n`
+      ? `\n<!-- Open Graph Meta Tags -->\n<meta property="og:type" content="website" />\n`
       : '') +
     (data.title
       ? `<meta property="og:title" content="${data.title}" />\n`
@@ -83,6 +88,10 @@ function Output({ data }: { data: any }) {
       {data.title && (
         <div className="title">
           <p>{`<title>${data.title}</title>`}</p>
+          <p>{`<meta name="title" content="${data.title}" />`}</p>
+          {data.description && (
+            <p>{`<meta name="description" content="${data.description}" />`}</p>
+          )}
         </div>
       )}
       <br />
@@ -139,6 +148,10 @@ function Output({ data }: { data: any }) {
         {data.alt && (
           <p>{`<meta name="twitter:image:alt" content="${data.alt}" />`}</p>
         )}
+        {/* Twitter - URL */}
+        {data.url && (
+          <p>{`<meta name="twitter:url" content="${data.url}" />`}</p>
+        )}
       </div>
 
       {/* Open Graph Meta Tags */}
@@ -151,6 +164,7 @@ function Output({ data }: { data: any }) {
           <>
             <br />
             <p className="comment">{`<!-- Open Graph Meta Tags -->`}</p>
+            <p>{`<meta property="og:type" content="website" />`}</p>
           </>
         )}
         {/* OG -Title */}
