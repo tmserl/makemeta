@@ -7,12 +7,12 @@ interface iChangelog {
 
 const changelog: iChangelog[] = [
   {
-    date: 'Apr X, 2022',
+    date: 'Apr 25, 2022',
     title: 'Extended meta tag output',
     version: '1.5',
     description: [
       'Extended the amount of useful meta tags outputted',
-      'Added sustainable badge to the footer',
+      'Added sustainable badge in the footer',
     ],
   },
   {
