@@ -5,6 +5,7 @@ import Input from '../Input';
 import Output from '../Output';
 import Footer from '../Footer';
 import Changelog from '../Changelog';
+import MissingSomething from '../MissingSomething';
 
 interface iData {
   title: string;
@@ -17,6 +18,8 @@ interface iData {
 
 function App() {
   const [showChangelog, setShowChangelog] = useState<boolean>(false);
+  const [showMissingSomething, setShowMissingSomething] =
+    useState<boolean>(false);
 
   const [data, setData] = useState<iData>({
     title: '',
@@ -51,10 +54,16 @@ function App() {
       <Header
         showChangelog={showChangelog}
         setShowChangelog={setShowChangelog}
+        showMissingSomething={showMissingSomething}
+        setShowMissingSomething={setShowMissingSomething}
       />
       <Changelog
         showChangelog={showChangelog}
         setShowChangelog={setShowChangelog}
+      />
+      <MissingSomething
+        showMissingSomething={showMissingSomething}
+        setShowMissingSomething={setShowMissingSomething}
       />
       <Input
         handleChange={handleChange}
