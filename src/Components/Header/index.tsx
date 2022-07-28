@@ -19,6 +19,7 @@ function Header({
       >
         What's new?
       </p>
+      <p className="missing-something">Missing something?</p>
     </header>
   );
 }

@@ -18,3 +18,10 @@ h2 {
   right: 15px;
   cursor: pointer;
 }
+
+.missing-something {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  cursor: pointer;
+}
