@@ -29,6 +29,7 @@
 .missing-something--intro {
   margin-bottom: 20px;
   text-align: center;
+  font-size: 1.1rem;
 }
 
 .missing-something--header {
@@ -37,7 +38,8 @@
 }
 
 .missing-something--input {
-  margin: 0 20px 20px 20px;
+  margin: 0 auto 20px auto;
+  width: 80%;
 }
 
 .missing-something--btn {

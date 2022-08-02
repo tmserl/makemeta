@@ -36,9 +36,10 @@ function MissingSomething({
             >
               Close
             </p>
-            <p className="missing-something--intro">
-              If you think we're missing a meta tag, let us know below!
-            </p>
+            <h3 className="missing-something--intro">
+              If you think we're missing a meta tag, let us know which one
+              below!
+            </h3>
             <form name="missing-something" method="POST" data-netlify="true">
               <label
                 className="missing-something--header"
