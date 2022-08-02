@@ -40,7 +40,14 @@ function MissingSomething({
               If you think we're missing a meta tag, let us know which one
               below!
             </h3>
-            <form name="missing-something" method="POST" data-netlify="true">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+              }}
+              name="missing-something"
+              method="POST"
+              data-netlify="true"
+            >
               <label
                 className="missing-something--header"
                 htmlFor="whats-missing"
