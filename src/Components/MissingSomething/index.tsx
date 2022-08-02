@@ -52,10 +52,10 @@ function MissingSomething({
                 What's missing?
               </label>
               <input
-                id="content"
                 className="missing-something--input"
-                type="text"
                 name="content"
+                id="content"
+                type="text"
               />
               <p>
                 <button className="missing-something--btn" type="submit">
