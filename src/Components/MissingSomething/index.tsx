@@ -44,20 +44,18 @@ function MissingSomething({
               onSubmit={(e) => {
                 e.preventDefault();
               }}
-              name="missing-something"
+              name="missing"
               method="POST"
               data-netlify="true"
             >
-              <label
-                className="missing-something--header"
-                htmlFor="whats-missing"
-              >
+              <label className="missing-something--header" htmlFor="content">
                 What's missing?
               </label>
               <input
+                id="content"
                 className="missing-something--input"
                 type="text"
-                name="whats-missing"
+                name="content"
               />
               <p>
                 <button className="missing-something--btn" type="submit">
