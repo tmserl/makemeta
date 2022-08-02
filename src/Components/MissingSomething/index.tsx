@@ -36,7 +36,27 @@ function MissingSomething({
             >
               Close
             </p>
-            <p>sadsad</p>
+            <p className="missing-something--intro">
+              If you think we're missing a meta tag, let us know below!
+            </p>
+            <form name="missing-something" method="POST" data-netlify="true">
+              <label
+                className="missing-something--header"
+                htmlFor="whats-missing"
+              >
+                What's missing?
+              </label>
+              <input
+                className="missing-something--input"
+                type="text"
+                name="whats-missing"
+              />
+              <p>
+                <button className="missing-something--btn" type="submit">
+                  Send
+                </button>
+              </p>
+            </form>
           </motion.div>
         </motion.div>
       )}
