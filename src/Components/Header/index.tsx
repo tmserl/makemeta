@@ -23,7 +23,14 @@ function Header({
       >
         What's new?
       </p>
-      <p className="missing-something">Missing something?</p>
+      <p
+        className="missing-something"
+        onClick={() => {
+          setShowMissingSomething(!showMissingSomething);
+        }}
+      >
+        Missing something?
+      </p>
     </header>
   );
 }

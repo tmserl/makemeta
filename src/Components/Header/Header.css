@@ -21,7 +21,7 @@ h2 {
 
 .missing-something {
   position: absolute;
-  top: 40px;
-  right: 15px;
+  top: 10px;
+  left: 15px;
   cursor: pointer;
 }
