@@ -3,7 +3,14 @@ import Header from '../Header';
 
 describe('Header', () => {
   beforeEach(() => {
-    render(<Header showChangelog={false} setShowChangelog={jest.fn()} />);
+    render(
+      <Header
+        showChangelog={false}
+        setShowChangelog={jest.fn()}
+        showMissingSomething={false}
+        setShowMissingSomething={jest.fn()}
+      />
+    );
   });
 
   it('renders MakeMeta title and subtitle', () => {

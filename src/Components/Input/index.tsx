@@ -41,7 +41,7 @@ function Input({
         >
           ?
         </motion.div>
-        <label>
+        <label htmlFor="title">
           What's the name of your site?{' '}
           <div
             className={`${
@@ -53,6 +53,7 @@ function Input({
           </div>
         </label>
         <input
+          id="title"
           placeholder="MakeMeta"
           type="text"
           name="title"
@@ -74,7 +75,7 @@ function Input({
             )}
           </AnimatePresence>
         </motion.div>
-        <label>
+        <label htmlFor="description">
           How would you describe your site?{' '}
           <div
             className={`${
@@ -85,6 +86,7 @@ function Input({
           </div>
         </label>
         <input
+          id="description"
           placeholder="Effortlessly generate Meta Tags for your website"
           type="text"
           name="description"
@@ -106,8 +108,9 @@ function Input({
             )}
           </AnimatePresence>
         </motion.div>
-        <label>What's the URL for your site?</label>
+        <label htmlFor="url">What's the URL for your site?</label>
         <input
+          id="url"
           placeholder="https://makemeta.app"
           type="text"
           name="url"
@@ -128,8 +131,9 @@ function Input({
             )}
           </AnimatePresence>
         </motion.div>
-        <label>What's your Twitter handle?</label>
+        <label htmlFor="twitter">What's your Twitter handle?</label>
         <input
+          id="twitter"
           placeholder="@tmserl_"
           type="text"
           name="twitter"
@@ -141,8 +145,9 @@ function Input({
         {isHintClicked && (
           <Hint hint={hints.twitter} isHintClicked={isHintClicked} />
         )}
-        <label>Link (URL) to an image?</label>
+        <label htmlFor="image">Link (URL) to an image?</label>
         <input
+          id="image"
           placeholder="https://social-card-image.xyz/"
           type="text"
           name="image"
@@ -163,7 +168,7 @@ function Input({
             )}
           </AnimatePresence>
         </motion.div>
-        <label>
+        <label htmlFor="alt">
           What's the alt text for your image?{' '}
           <div
             className={`${
@@ -174,6 +179,7 @@ function Input({
           </div>
         </label>
         <input
+          id="alt"
           placeholder="MakeMeta Logo"
           type="text"
           name="alt"

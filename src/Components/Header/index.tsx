@@ -3,9 +3,13 @@ import './Header.css';
 function Header({
   showChangelog,
   setShowChangelog,
+  showMissingSomething,
+  setShowMissingSomething,
 }: {
   showChangelog: boolean;
   setShowChangelog: React.Dispatch<React.SetStateAction<boolean>>;
+  showMissingSomething: boolean;
+  setShowMissingSomething: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
     <header className="wrapper">
@@ -18,6 +22,14 @@ function Header({
         }}
       >
         What's new?
+      </p>
+      <p
+        className="missing-something"
+        onClick={() => {
+          setShowMissingSomething(!showMissingSomething);
+        }}
+      >
+        Missing something?
       </p>
     </header>
   );
