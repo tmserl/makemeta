@@ -41,6 +41,7 @@ function MissingSomething({
               below!
             </h3>
             <form name="missing" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="missing" />
               <label className="missing-something--header">
                 What's missing?
               </label>
