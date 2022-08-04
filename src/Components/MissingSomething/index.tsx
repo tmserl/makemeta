@@ -40,9 +40,9 @@ function MissingSomething({
               If you think we're missing a meta tag, let us know which one
               below!
             </h3>
-            <form name="missing" method="POST" data-netlify="true">
+            <form name="missing" method="POST">
               <input type="hidden" name="form-name" value="missing" />
-              <label className="missing-something--header">
+              <label htmlFor="content" className="missing-something--header">
                 What's missing?
               </label>
               <input
