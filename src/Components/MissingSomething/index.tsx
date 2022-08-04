@@ -36,25 +36,28 @@ function MissingSomething({
             >
               Close
             </p>
-            <h3 className="missing-something--intro">
-              If you think we're missing a meta tag, let us know which one
-              below!
-            </h3>
             <form name="missing" method="POST">
               <input type="hidden" name="form-name" value="missing" />
               <label htmlFor="content" className="missing-something--header">
-                What's missing?
+                If you think we're missing a meta tag, let us know which one
+                below!
               </label>
               <input
                 className="missing-something--input"
+                type="text"
                 name="content"
                 id="content"
-                type="text"
+                placeholder="<meta name='twitter:image:alt' content='alt text goes here' />"
               />
               <p>
-                <button className="missing-something--btn" type="submit">
+                <motion.button
+                  className="missing-something--btn"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 1.25 }}
+                  type="submit"
+                >
                   Send
-                </button>
+                </motion.button>
               </p>
             </form>
           </motion.div>

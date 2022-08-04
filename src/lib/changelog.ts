@@ -7,12 +7,20 @@ interface iChangelog {
 
 const changelog: iChangelog[] = [
   {
+    date: 'Aug 4, 2022',
+    title: "What's missing",
+    version: '1.6',
+    description: [
+      'Added the ability for users to submit suggestions for missing meta tags.',
+    ],
+  },
+  {
     date: 'Apr 25, 2022',
     title: 'Extended meta tag output',
     version: '1.5',
     description: [
-      'Extended the amount of useful meta tags outputted',
-      'Added sustainable badge in the footer',
+      'Extended the amount of useful meta tags outputted.',
+      'Added sustainable badge in the footer.',
     ],
   },
   {
